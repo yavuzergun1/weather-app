@@ -11,8 +11,9 @@ function App() {
     const key= process.env.REACT_APP_WEATHER_DATA;
 
       try{
-        const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`)
+        const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`)
         console.log(data);
+        setweather(data);
       }         
       catch {
      
@@ -28,7 +29,11 @@ function App() {
  
   return (
     <div>
-    {JSON.stringify()}
+    city: {weather.name}
+      <hr />
+    Temp: {Math.round(weather.main.temp)} degree
+    <hr />
+    min-temp: {Math.round(weather.main.temp_min)} degree
     </div>
   )
 
