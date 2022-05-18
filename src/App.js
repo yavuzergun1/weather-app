@@ -19,7 +19,7 @@ function App() {
       }
   }
       useEffect (()=>{
-        getWeatherData(latitude, longitude)
+      latitude && longitude &&  getWeatherData(latitude, longitude)
       },[latitude])
 
   
