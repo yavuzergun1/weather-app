@@ -4,29 +4,34 @@ import { useState, useEffect } from 'react'
 import { usePosition } from 'use-position'
 
 function App() {
-
+  const {latitude, longitude}=  usePosition();
   const [weather, setweather] = useState([]);
    
-    const {latitude, longitude}= usePosition();
-    console.log(latitude, longitude);
- 
-    useEffect(()=>{
-      axios(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=1ac2c05c20ed62694dfdbe712be26cae`)
-      .then((res)=> (setweather(res.data)))
-      .catch((e)=>console.log(e))
+  const getWeatherData= async (lat, lon)=> { 
+    const key= process.env.REACT_APP_WEATHER_DATA;
+
+      try{
+        const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`)
+        console.log(data);
+      }         
+      catch {
      
-      console.log(weather);
-      
-      }, [latitude])
+      }
+  }
+      useEffect (()=>{
+        getWeatherData(latitude, longitude)
+      },[latitude])
+
   
+    
 
-
+ 
   return (
     <div>
-    {JSON.stringify(weather)}
+    {JSON.stringify()}
     </div>
   )
-}
 
+  }
 
 export default App;
