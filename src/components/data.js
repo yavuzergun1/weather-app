@@ -6,22 +6,44 @@ import { usePosition } from 'use-position'
 
 
 function Data() {
-    const [weather, setWeather] = useState([]);
+    const [users, setUsers] = useState([]);
+   
     const {latitude, longitude}= usePosition();
     console.log(latitude, longitude);
-    useEffect(() => {
-      axios
-        .get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&exclude={part}&appid=1ac2c05c20ed62694dfdbe712be26cae`)
-        .then(response => setWeather(response.data))
-        .catch(error => console.log({ error }));
-    }, [latitude]);
-   console.log(weather);
-    
+ 
+    useEffect(()=>{
+      axios(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=1ac2c05c20ed62694dfdbe712be26cae`)
+      .then((res)=> (setUsers(res.data)))
+      .catch((e)=>console.log(e))
+      
+      }, [latitude])
+  
+
+
   return (
     <div>
-    
+    {JSON.stringify(users)}
     </div>
   )
 }
 
 export default Data
+
+
+// const[users, setUsers]= useState([]);
+//   const[isloading, setIsloading]= useState(true);
+ 
+//   useEffect(()=>{
+//   axios('https://jsonplaceholder.typicode.com/users')
+//   .then((res)=> (setUsers(res.data)))
+//   .catch((e)=>console.log(e))
+//   .finally(()=> setIsloading(false))
+//   }, [])
+// return (
+//   <div> 
+//       <h1>Users</h1>
+//       {isloading && <div>Loading...</div>}
+//       {users.map((user)=> <div key={user.id}>{user.name} </div> )}
+//   </div>
+// )
+// }

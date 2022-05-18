@@ -1,10 +1,14 @@
-import Data from './components/data';
-import './App.css';
+import React from 'react';
+import Data from './components/data'
+
 
 function App() {
+
+ 
+
   return (
     <div>
-     <Data/>
+   <Data/>
     </div>
   );
 }
