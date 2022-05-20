@@ -4,9 +4,10 @@ import {UseData} from '../context/DataContext'
 
 function CurrentWeather() {
   const {currentWeather, setCurrentWeather}= UseData();
+  const celcius= "°C"
   return (
     <div>
-      {Math.round(currentWeather.temp)}°C
+   {(currentWeather.temp ? currentWeather.temp &&`${ Math.round(currentWeather.temp)}°C ` : "")}
     </div>
   )
 }
