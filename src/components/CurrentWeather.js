@@ -6,7 +6,7 @@ function CurrentWeather() {
   const {currentWeather, setCurrentWeather}= UseData();
   return (
     <div>
-      {currentWeather.temp}
+      {Math.round(currentWeather.temp)}°C
     </div>
   )
 }
