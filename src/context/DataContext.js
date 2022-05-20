@@ -8,22 +8,26 @@ const DataContext= createContext();
 export const DataProvider= ({children})=>{
     const {latitude, longitude}= usePosition();
     const [weather, setweather]= useState([]);
-    const [currentWeather, setCurrentWeather]= useState([])
+    const [currentWeather, setCurrentWeather]= useState([]);
+    const [dailyWeather, setDailyWeather] = useState([]);
     const values = {
         weather,
         setweather,
         currentWeather,
         setCurrentWeather,
+        dailyWeather,
+        setDailyWeather,
     }
 
     const getWeatherData= async (lat, lon)=> { 
         const key= process.env.REACT_APP_WEATHER_DATA;
     
           try{
-            const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=daily&units=metric&appid=${key}`)
+            const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude="daily"&appid=${key}&units=metric`)
             
             setweather(data)
             setCurrentWeather(data.current)
+            setDailyWeather(data.daily)
             console.log(data);
           }         
           catch {
