@@ -13,21 +13,16 @@ export const DataProvider= ({children})=>{
     const values = {
         weather,
         setweather,
-        currentWeather,
-        setCurrentWeather,
-        dailyWeather,
-        setDailyWeather,
+        
     }
 
     const getWeatherData= async (lat, lon)=> { 
         const key= process.env.REACT_APP_WEATHER_DATA;
     
           try{
-            const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude="daily"&appid=${key}&units=metric`)
+            const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude={part}&appid=${key}`)
             
             setweather(data)
-            setCurrentWeather(data.current)
-            setDailyWeather(data.daily)
             console.log(data);
           }         
           catch {

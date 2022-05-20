@@ -4,12 +4,19 @@ import moment from 'moment';
 
 
 function CurrentWeather() {
-  const {currentWeather, setCurrentWeather}= UseData();
+  const {currentWeather, weather}= UseData();
+ 
+
+  if (!weather.current){
+    return <p></p>
+  }
   return (
     <div>
-   {(currentWeather ? currentWeather.temp &&`${ Math.round(currentWeather.temp)}°C ` : "")}
-   {currentWeather.timezone}
-        <p className="day"> {moment().format("D MMM YYYY")}</p>
+    
+    
+   {(weather.current ? weather.current.temp &&`${ Math.round(weather.current.temp)}°C ` : "")}
+        
+        <p className="day"> {moment().format(`D MMM YYYY`)}</p>
         <p className="day"> {moment().format("dddd")}</p>
         <p className="day"> {moment().format('LTS')}</p>
     </div>
