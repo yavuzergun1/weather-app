@@ -1,6 +1,8 @@
 import React from 'react';
 import {UseData} from '../context/DataContext'
 import moment from 'moment';
+import './DailyWeather.css'
+import '../App.css'
 
 function DailyWeather() {
    
@@ -10,22 +12,24 @@ function DailyWeather() {
       }
 
   return (
-    <div>
-      <ul>
-    <h2>8 Days Forecast</h2>
+    <div className='dailyWeather'>
+    <h1>8 Days Forecast</h1>
+      <div className='cards-container'>
+      
       {weather.daily.map((day, index)=>{
-          return <li key={index}> 
-                <div>
+          return <div key={index} className='card-container'>
+              
                 <span>{moment().add(`${index}`, 'days').format('dddd') }</span>
+                <span> {Math.round(day.temp.max)}°C
+                / {Math.round(day.temp.min)}°C</span> 
                 <span><img className='daily-icons'  src={`http://openweathermap.org/img/w/${weather.daily[index].weather[0].icon}.png`} alt="" />
                 </span>
-                <span> {Math.round(day.temp.max)}°C
-                / {Math.round(day.temp.min)}°C</span> </div>
-                <br /></li>
-          
+                </div>
+              
       })}
         {/* {weather.daily[0].dt} */}
-         </ul>
+        
+      </div>
          </div>
   )
 }
