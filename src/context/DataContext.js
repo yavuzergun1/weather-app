@@ -29,7 +29,6 @@ export const DataProvider= ({children})=>{
             setWeatherCondition(data.current.weather[0].main)
             setIsDay((data.current.weather[0].main).indexOf("n"))
             console.log(data);
-            console.log(weatherCondition);
            
           }         
           catch {

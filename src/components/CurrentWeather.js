@@ -14,12 +14,16 @@ function CurrentWeather() {
   }
   return (
 <div>
-    <div className='current-container'>
-      <div className='' ></div>
-    <h1 className='timeZone'>{weather.timezone} </h1> 
-    <h3 className='current-deg' >{(weather.current ? weather.current.temp &&`${ Math.round(weather.current.temp)}°C ` : "")} <img style={{blockSize: '100px'}} src={`http://openweathermap.org/img/w/${weather.current.weather[0].icon}.png`} alt="" /></h3>
-   <p>{weather.current.weather[0].description} </p>
-   <p>{isDay} </p>
+    <div className='first-container' >
+    <h1 className='timezone'>{weather.timezone}  </h1> 
+        <img className='current-icon'  src={`http://openweathermap.org/img/w/${weather.current.weather[0].icon}.png`} alt="" />
+      <div className='degree-container'> 
+        <div>{weather.current.weather[0].description}</div>
+        <h3 className='current-deg' >{(weather.current ? weather.current.temp &&`${ Math.round(weather.current.temp)}°C ` : "")} </h3>
+      </div>
+    </div>
+    
+    <div className='second-container'>
     <p className="day"> {moment().format(`D MMM YYYY`)}</p>
     <p className="day"> {moment().format("dddd")}</p>
     <p className="day"> {moment().format('LTS')}</p>
