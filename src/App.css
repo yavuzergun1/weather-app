@@ -1,4 +1,34 @@
+*{
+  box-sizing: border-box;
+  
+}
+
+.main-container{
+ 
+  position: relative;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 55% 25%;
+}
+
+.Clear {
+  background-image: url(img/sunny-day.png);
+}
+.Rain{
+  background-image: url(img/rainy-day.png);
+}
+.Thunderstorm{
+  background-image: url(img/thunderstorm-night.png);
+  background-position: 0%;
+}
+.Drizzle{
+  background-image: url(img/drizzle-day.png);
+}
+
+
 img{
-  position: inherit;
-  top: 850px;
+  position: relative;
+  top: 20px;
+  block-size: 50px;
 }

@@ -16,7 +16,7 @@ function DailyWeather() {
       {weather.daily.map((day, index)=>{
           return <li key={index}> 
                 <div><span>{moment().add(`${index}`, 'days').format('dddd') }</span>
-                <span><img src={`http://openweathermap.org/img/w/${weather.daily[index].weather[0].icon}.png`} alt="" />
+                <span><img  src={`http://openweathermap.org/img/w/${weather.daily[index].weather[0].icon}.png`} alt="" />
                 </span>
                 <span> {Math.round(day.temp.max)}°C
                 / {Math.round(day.temp.min)}°C</span> </div>
