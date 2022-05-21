@@ -8,12 +8,16 @@ const DataContext= createContext();
 export const DataProvider= ({children})=>{
     const {latitude, longitude}= usePosition();
     const [weather, setweather]= useState([]);
-   const [weatherCondition, setWeatherCondition]= useState();
+    const [weatherCondition, setWeatherCondition]= useState();
+    const [isDay, setIsDay]= useState()
     const values = {
         weather,
         setweather,
-        
-    }
+        setWeatherCondition,
+        weatherCondition,
+        isDay,
+        setIsDay,
+        }
     
 
     const getWeatherData= async (lat, lon)=> { 
@@ -22,9 +26,11 @@ export const DataProvider= ({children})=>{
           try{
             const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude="name"&appid=${key}`)
             setweather(data)
-            setWeatherCondition(data.current.weather[0].description)
+            setWeatherCondition(data.current.weather[0].main)
+            setIsDay((data.current.weather[0].main).indexOf("n"))
             console.log(data);
             console.log(weatherCondition);
+           
           }         
           catch {
          console.log('hata');

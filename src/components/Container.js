@@ -5,13 +5,16 @@ import CurrentWeather from './CurrentWeather'
 import DailyWeather from './DailyWeather'
 
 function Container() {
-    const {weather}= UseData();
-    if (!weather.current ){
+    const {weather, weatherCondition, isDay}= UseData();
+    
+    if (!weather.current){
         return <p></p>
-      }
-    console.log((weather.current.weather[0].main));
+    }
+    console.log((isDay>-1 ? "day" : "night"));
+    console.log(weatherCondition.toLowerCase());
+    
   return (
-    <div className={`main-container  Drizzle`}>
+    <div className={`main-container  ${weatherCondition.toLowerCase()}-${isDay>-1 ? "day" : "night"}`}>
        {/* ${(weather.current.weather[0].main)} */}
         <CurrentWeather/>
         <DailyWeather/>

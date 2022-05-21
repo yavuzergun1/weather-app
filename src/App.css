@@ -4,27 +4,37 @@
 }
 
 .main-container{
- 
+ width: 100%;
+ height: auto;
   position: relative;
-  z-index: 0;
+  /* z-index: 0; */
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 55% 25%;
+  background-size:cover;
+  /* background-position: 55% 25%; */
 }
 
-.Clear {
+.clear-day {
   background-image: url(img/sunny-day.png);
 }
-.Rain{
+.clear-night{
+  background-image: url(img/open-night.png);
+  /* background-position:  ; */
+  color: rgb(218, 146, 4);
+}
+.rain-day{
   background-image: url(img/rainy-day.png);
 }
-.Thunderstorm{
+.rain-night{
+  background-image: url(img/rain-night.png);
+}
+.thunderstorm{
   background-image: url(img/thunderstorm-night.png);
   background-position: 0%;
 }
-.Drizzle{
+.drizzle{
   background-image: url(img/drizzle-day.png);
 }
+
 
 
 img{
