@@ -40,7 +40,7 @@ function CurrentWeather() {
       <div className="currentData-container">
         <div className="currentData">Feels Like: {`${ Math.round(weather.current.feels_like)}`}°C </div>
         <div className="currentData">Humidity: %{weather.current.humidity} </div>
-        <div className="currentData"></div>
+        <div className="currentData">Wind Speed: {weather.current.wind_speed}m/s </div>
         <div className="currentData"></div>
         <div className="currentData"></div>
         <div className="currentData"></div>
