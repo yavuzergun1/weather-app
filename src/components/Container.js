@@ -10,9 +10,8 @@ function Container() {
     if (!weather.current){
         return <p></p>
     }
-    // ${weatherCondition.toLowerCase()}-${isDay>-1 ? "day" : "night"}
   return (
-    <div className={`main-container clouds-night`}>
+    <div className={`main-container ${weatherCondition.toLowerCase()}-${isDay>-1 ? "day" : "night"}`}>
         <CurrentWeather/>
         <DailyWeather/>
     </div>

@@ -6,6 +6,7 @@
   width: 100%;
   height: 100vh;
   display: block;
+  overflow:scroll;
   background-repeat: no-repeat;
   background-size:cover;
   color: rgb(211, 217, 250);
@@ -48,21 +49,26 @@
   background-image: url(img/snow-night.jpg);
   color: rgb(250, 224, 174);
 }
-
 .clouds-day{
   background-image: url("https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   color: rgb(53, 30, 136);
-
 }
-
 .clouds-night{
   background-image: url("https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg");
+}
 
+.header{
+  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
+
+  display: flex;
+  justify-content:space-between;
+  padding-top: 15px;
 }
 
 .first-container{
-height: 100px;
+ /* text-shadow: 1px -1px 2px rgba(163, 169, 212, 0.84); */
 display: flex;
+justify-content:flex-end;
 flex-direction: row;
 padding-left: 40px;
 }
@@ -73,9 +79,11 @@ padding-left: 40px;
   justify-content:flex-start; 
   align-items:flex-start;
 }
+.data{
+  display: flex;
+  }
 
 .current-icon{
- position: relative;
  width:  95px;
 }
 
@@ -86,15 +94,55 @@ padding-left: 40px;
 }
 
 .second-container{
-  padding-left: 40px;
-  position:absolute;
-  right: 90px;
-  top: 25px;
+  padding-right: 70px;
+  padding-top: 25px;
 }
 
-@media (max-width: 880px){
+.currentData-container{
+  display: block;
+}
+
+@media (max-width: 880px) and (min-width:631px) {
   .main-container{
     height: auto;
     font-size: 1rem;
+  }
+  .first-container{
+    padding-left: 20px;
+    flex-direction: column;
+  }
+  .second-container{
+    padding-right: 20px;
+  }
+}
+
+
+
+@media(max-width:630px){
+  .main-container{
+     padding-top: 15px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+.second-container, .data, h3, .degree-container>div{
+    font-size: 15px;
+  }
+  .current-icon{
+    width: 40px;
+   height: 40px;
+  }
+  .first-container{
+    padding-left: 10px;
+    flex-direction: column;
+  }
+  .second-container{
+    padding-right: 10px;
+    font-size: 10px;
+    
+    justify-content: end;
+  }
+  .data{
+    align-items:center;
   }
 }

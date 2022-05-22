@@ -13,17 +13,17 @@ function DailyWeather() {
 
   return (
     <div className='dailyWeather'>
-    <h1>8 Days Forecast</h1>
+    <h1 className='days-topic'>8 Days Forecast</h1>
       <div className='cards-container'>
       
       {weather.daily.map((day, index)=>{
           return <div key={index} className='card-container'>
               
-                <span>{moment().add(`${index}`, 'days').format('dddd') }</span>
-                <span> {Math.round(day.temp.max)}°C
-                / {Math.round(day.temp.min)}°C</span> 
-                <span><img className='daily-icons'  src={`http://openweathermap.org/img/w/${weather.daily[index].weather[0].icon}.png`} alt="" />
-                </span>
+                <div className='day-day'>{moment().add(`${index}`, 'days').format('dddd') }</div>
+                <div className='day-degree'> {Math.round(day.temp.max)}°C
+                / {Math.round(day.temp.min)}°C</div> 
+                <div className='day-icon'><img className='daily-icons'  src={`http://openweathermap.org/img/w/${weather.daily[index].weather[0].icon}.png`} alt="" />
+                </div>
                 </div>
               
       })}
