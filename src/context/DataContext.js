@@ -27,7 +27,7 @@ export const DataProvider= ({children})=>{
         const key= process.env.REACT_APP_WEATHER_DATA;
     
           try{
-            const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude="name"&appid=${key}`)
+            const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude="current.name"&appid=${key}`)
             const {currentData}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`)
             setweather(data)
             setCurrentData(currentData)

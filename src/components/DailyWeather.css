@@ -20,10 +20,19 @@
   }
   
   .card-container{
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+  }
+  .card-container:hover{
+    background-color: rgba(255, 255, 255, 0.185);
+    border-radius: 10px;
+  }
+  .card-container:active {
+    background-color: rgba(255, 255, 255, 0.5);
+
   }
   
   @media (max-width: 880px) and (min-width:631px){
@@ -39,6 +48,7 @@
          
      }
      .card-container{
+       
          display: flex;
          flex-direction: row;
          justify-content:space-around;
