@@ -4,10 +4,10 @@ import { UseData } from '../context/DataContext'
 
 function Day1() {
   const {weather, weatherCondition, isDay}= UseData();
-  console.log(weather);
+  // console.log(weather);
   return (
     <div className='main-container clear-day'>
-      dfgdfg
+      
     </div>
   )
 }
