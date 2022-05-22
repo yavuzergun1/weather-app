@@ -27,7 +27,7 @@ export const DataProvider= ({children})=>{
             const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude="name"&appid=${key}`)
             setweather(data)
             setWeatherCondition(data.current.weather[0].main)
-            setIsDay((data.current.weather[0].main).indexOf("n"))
+            setIsDay((data.current.weather[0].main).indexOf("d"))
             console.log(data);
            
           }         

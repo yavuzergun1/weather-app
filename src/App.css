@@ -49,6 +49,17 @@
   color: rgb(250, 224, 174);
 }
 
+.clouds-day{
+  background-image: url("https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  color: rgb(53, 30, 136);
+
+}
+
+.clouds-night{
+  background-image: url("https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg");
+
+}
+
 .first-container{
 height: 100px;
 display: flex;
