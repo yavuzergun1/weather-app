@@ -18,6 +18,9 @@
     justify-content: space-around;
     margin-bottom: 30px;
   }
+  .description{
+    width: 80px;
+  }
   
   .card-container{
     padding: 20px;
