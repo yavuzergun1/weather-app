@@ -5,7 +5,7 @@ import moment from 'moment';
 
 
 function CurrentWeather() {
-  const {weather}= UseData();
+  const {weather, currentData}= UseData();
 
 
 
@@ -17,7 +17,7 @@ function CurrentWeather() {
 <div>
   <div className='header'>
   <div className='first-container' >
-    <h1 className='timezone'>{weather.timezone}  </h1> 
+    <h1 className='timezone'> {currentData.sys.country} / {currentData.name}</h1> 
         
         <div className="data">
         <img className='current-icon'  src={`http://openweathermap.org/img/w/${weather.current.weather[0].icon}.png`} alt="" />

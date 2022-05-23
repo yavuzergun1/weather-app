@@ -25,6 +25,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-decoration: none;
   }
   .card-container:hover{
     background-color: rgba(255, 255, 255, 0.185);
@@ -32,7 +33,9 @@
   }
   .card-container:active {
     background-color: rgba(255, 255, 255, 0.5);
-
+  }
+  .day-day, day-degree{
+    text-decoration: none;
   }
   
   @media (max-width: 880px) and (min-width:631px){

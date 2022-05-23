@@ -8,7 +8,6 @@ function App() {
     <DataProvider>
       <Container/>
       <Deneme/>
-      <Day1/>
     </DataProvider>
   )
 }
