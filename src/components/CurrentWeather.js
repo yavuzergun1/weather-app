@@ -20,7 +20,7 @@ function CurrentWeather() {
   return (
 <div>
 <form onSubmit={(e)=>{e.preventDefault(); setCity(form)}}>
-  <input type="text"  onChange={(e)=> setForm(e.target.value)} />
+  <input type="text" placeholder='Type a City Name' onChange={(e)=> setForm(e.target.value)} />
 <div>{cityData === undefined ? `${currentData.name}` : cityData.name} </div>
 </form>
   <div className='header'>
