@@ -115,7 +115,7 @@ padding-left: 40px;
   color: rgb(56, 50, 50);
 }
 
-@media (max-width: 880px) {
+@media (max-width: 960px) {
   .main-container{
     height: auto;
     font-size: 1rem;

@@ -21,7 +21,12 @@
   .description{
     width: 80px;
   }
-  
+  .days-topic{
+   color: rgb(106, 35, 112);
+  }
+  .day-degree{
+    width: 100px;
+  }
   .card-container{
     padding: 20px;
     display: flex;
@@ -37,11 +42,9 @@
   .card-container:active {
     background-color: rgba(255, 255, 255, 0.5);
   }
-  .day-day, day-degree{
-    text-decoration: none;
-  }
+
   
-  @media (max-width: 880px) and (min-width:631px){
+  @media (max-width: 960px) and (min-width:631px){
     
     .dailyWeather{
       margin-top: 80px;
@@ -58,8 +61,7 @@
          display: flex;
          flex-direction: row;
          justify-content:space-around;
-         text-align:left;
-         font-size: 16px;
+         
      }
     
      .daily-icons{
@@ -68,10 +70,10 @@
       align-items: flex-end;
      }
      .day-day{
+      text-align:center;
       display: flex;
-      width: 100px;
-       
      }
+    
   }
 
   @media (max-width:630px){
@@ -92,7 +94,7 @@
        font-size: 13px;
    }
    .days-topic{
-    font-size: 15px;
+    font-size: 19px;
   }
   .day-day{
     width: 100px;
