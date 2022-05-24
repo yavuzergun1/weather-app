@@ -29,10 +29,9 @@ function DailyWeather() {
                 </div>
                     </Link>
       })}
-        {/* {weather.daily[0].dt} */}
         
       </div>
-      <div className=''>codded by Yavuz Ergun</div>
+      <div className='note'>codded by Yavuz Ergun</div>
       <Outlet/>
          </div>
   )
