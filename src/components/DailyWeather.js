@@ -32,6 +32,7 @@ function DailyWeather() {
         {/* {weather.daily[0].dt} */}
         
       </div>
+      <div className='note'>codded by Yavuz Ergun</div>
       <Outlet/>
          </div>
   )
