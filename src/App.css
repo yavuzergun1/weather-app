@@ -105,7 +105,7 @@ padding-left: 40px;
   font-size: 1;
 }
 
-@media (max-width: 880px) and (min-width:631px) {
+@media (max-width: 880px) {
   .main-container{
     height: auto;
     font-size: 1rem;
@@ -119,11 +119,14 @@ padding-left: 40px;
   .currentData-container{
     margin-left: 20px;
   }
+  .clear-day{
+    background-position: -980px;
+  }
 }
 
 
 
-@media(max-width:630px){
+@media(max-width:630px) {
   .main-container{
      padding-top: 15px;
   }
@@ -154,4 +157,10 @@ padding-left: 40px;
     font-size: 13px;
     margin-left: 15px;
   }
+  
+  .clear-day{
+    background-position: -1080px;
+  }
+
 }
+
