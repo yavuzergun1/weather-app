@@ -27,6 +27,9 @@
   .day-degree{
     width: 100px;
   }
+  .day-day{
+    width: 80px;
+  }
   .card-container{
     padding: 20px;
     display: flex;

@@ -18,7 +18,7 @@ export const CityDataProvider= ({children})=>{
         const key= process.env.REACT_APP_WEATHER_DATA;
     
           
-              const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`)
+              const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&exclude="daily"&appid=${key}`)
              setCityData(data)
             }  
             

@@ -31,7 +31,7 @@ function DailyWeather() {
       })}
         
       </div>
-      <div className='note'>codded by Yavuz Ergun</div>
+      <div className='note'>coded by Yavuz Ergun</div>
       <Outlet/>
          </div>
   )
