@@ -44,12 +44,7 @@ export const DataProvider= ({children})=>{
                 setIsDay((data.current.weather[0].icon).indexOf("d"));
               })
             )
-            console.log(data);
-            console.log(currentData);
-            
-
-           
-                   
+             
       
         }
           useEffect (()=>{
@@ -57,7 +52,8 @@ export const DataProvider= ({children})=>{
           // console.log(weather.timezone);
           },[latitude])
 
-
+          // console.log(weather);
+          // console.log(currentData);
           return <DataContext.Provider value={values} >{children}</DataContext.Provider>
 }
 

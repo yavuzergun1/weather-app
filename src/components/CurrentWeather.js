@@ -1,29 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {UseData} from '../context/DataContext'
 import moment from 'moment';
+import { UseCityData } from '../context/CityDataContext';
 
 
 
 function CurrentWeather() {
-  const {weather, currentData}= UseData();
-
-
-
-  if (!weather.current ){
+  const {city, setCity, cityData}= UseCityData();
+  const [form, setForm]= useState();
+  const {weather, currentData, setCurrentData}= UseData();
+  
+ 
+  
+  if (!weather.current){
     return <p></p>
   }
+  console.log(currentData);
   
   return (
 <div>
+<form onSubmit={(e)=>{e.preventDefault(); setCity(form)}}>
+  <input type="text"  onChange={(e)=> setForm(e.target.value)} />
+<div>{cityData === undefined ? `${currentData.name}` : cityData.name} </div>
+</form>
   <div className='header'>
   <div className='first-container' >
-    <h1 className='timezone'> {currentData.sys.country} / {currentData.name}</h1> 
+    <h1 className='timezone'>{cityData === undefined ? `${currentData.sys.country} / ${currentData.name}`  : cityData.name}</h1> 
         
         <div className="data">
-        <img className='current-icon'  src={`http://openweathermap.org/img/w/${weather.current.weather[0].icon}.png`} alt="" />
+        <img className='current-icon'  src={cityData === undefined ? `http://openweathermap.org/img/w/${weather.current.weather[0].icon}.png` : `http://openweathermap.org/img/w/${cityData.weather[0].icon}.png`} alt="" />
         <div className='degree-container'> 
-        <div>{weather.current.weather[0].description}</div>
-        <h3 className='current-deg' >{(weather.current ? weather.current.temp &&`${ Math.round(weather.current.temp)}°C ` : "")} </h3>
+        <div>{cityData === undefined ? weather.current.weather[0].description : cityData.weather[0].description }</div>
+        <h3 className='current-deg' >{cityData === undefined ? (weather.current ? weather.current.temp &&`${ Math.round(weather.current.temp)}°C ` : "") : `${Math.round(cityData.main.temp)}°C`} </h3>
         </div>
        
       </div>
