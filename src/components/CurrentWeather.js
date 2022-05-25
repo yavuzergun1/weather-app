@@ -13,8 +13,8 @@ function CurrentWeather() {
   if (!weather.current){
     return <p></p>
   }
-  console.log(cityLat);
-  console.log(cityLon);
+  console.log(currentData);
+ 
   return (
 <div>
 <form onSubmit={(e)=>{e.preventDefault(); setCity(form)}}>
@@ -28,8 +28,8 @@ function CurrentWeather() {
         <div className="data">
         <img className='current-icon'  src={cityData === undefined ? `http://openweathermap.org/img/w/${weather.current.weather[0].icon}.png` : `http://openweathermap.org/img/w/${cityData.weather[0].icon}.png`} alt="" />
         <div className='degree-container'> 
-        <div>{cityData === undefined ? weather.current.weather[0].description : cityData.weather[0].description }</div>
-        <h3 className='current-deg' >{cityData === undefined ? (weather.current ? weather.current.temp &&`${ Math.round(weather.current.temp)}°C ` : "") : `${Math.round(cityData.main.temp)}°C`} </h3>
+        <div>{cityData === undefined ? currentData.weather[0].description : cityData.weather[0].description }</div>
+        <h3 className='current-deg' >{cityData === undefined ? (currentData ? currentData.main.temp &&`${ Math.round(currentData.main.temp)}°C ` : "") : `${Math.round(cityData.main.temp)}°C`} </h3>
         </div>
        
       </div>
@@ -44,11 +44,11 @@ function CurrentWeather() {
 
   </div>
       <div className="currentData-container">
-        <div className="currentData">Feels Like: {`${ Math.round(weather.current.feels_like)}`}°C </div>
-        <div className="currentData">Humidity: %{weather.current.humidity} </div>
-        <div className="currentData">Wind Speed: {weather.current.wind_speed}m/s </div>
-        <div className="currentData">Max Temprature: {`${ Math.round(weather.daily[0].temp.max)}`}°C</div>
-        <div className="currentData">Min Temprature: {`${ Math.round(weather.daily[0].temp.min)}`}°C</div>
+        <div className="currentData">Feels Like: {`${ Math.round(currentData.main.feels_like)}`}°C </div>
+        <div className="currentData">Humidity: %{currentData.main.humidity} </div>
+        <div className="currentData">Wind Speed: {currentData.wind.speed}m/s </div>
+        <div className="currentData">Max Temprature: {`${ Math.round(currentData.main.temp_max)}`}°C</div>
+        <div className="currentData">Min Temprature: {`${ Math.round(currentData.main.temp_min)}`}°C</div>
             
       </div>
 
