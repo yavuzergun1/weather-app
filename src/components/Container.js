@@ -1,10 +1,9 @@
-import React from 'react'
-import '../App.css'
-import {UseData} from '../context/DataContext'
-import Day1 from '../routes/Day1'
-import CurrentWeather from './CurrentWeather'
-import DailyWeather from './DailyWeather'
-import Deneme from './Deneme'
+import React from 'react';
+import '../App.css';
+import {UseData} from '../context/DataContext';
+import CurrentWeather from './CurrentWeather';
+import DailyWeather from './DailyWeather';
+import Deneme from './Deneme';
 
 function Container() {
     const {weather, weatherCondition, isDay}= UseData();

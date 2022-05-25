@@ -3,7 +3,6 @@ import {UseData} from '../context/DataContext'
 import moment from 'moment';
 import './DailyWeather.css'
 import '../App.css'
-import { Link, Outlet } from 'react-router-dom';
 
 function DailyWeather() {
    
@@ -19,20 +18,19 @@ function DailyWeather() {
       
       {weather.daily.map((day, index)=>{
        
-          return   <Link style={{textDecoration: "none"}} key={index} to={`./routes/Day${index}` } > 
-                <div  className={index===0 ? 'none' : 'card-container'}>              
+          return <div key={index} className={index===0 ? 'none' : 'card-container'}>              
                 <div  className='day-day'>{moment().add(`${index}`, 'days').format('dddd') }</div>
                 <div className='day-degree'> {Math.round(day.temp.max)}°C
                 / {Math.round(day.temp.min)}°C</div> 
                 <div className='day-icon'><img className='daily-icons'  src={`http://openweathermap.org/img/w/${weather.daily[index].weather[0].icon}.png`} alt="" /></div>
                 <div className='description'>{weather.daily[index].weather[0].description}</div>
                 </div>
-                    </Link>
+                    
       })}
         
       </div>
       <div className='note'>coded by Yavuz Ergun</div>
-      <Outlet/>
+     
          </div>
   )
 }
