@@ -8,6 +8,7 @@ export const CityDataProvider= ({children})=>{
     const [city, setCity]=useState();
     const [cityLat, setCityLat]= useState();
     const [cityLon, setCityLon]= useState();
+    const [cityMain, setCityMain]= useState();
     const values = {
         city,
         setCity,
@@ -16,7 +17,9 @@ export const CityDataProvider= ({children})=>{
         cityLat,
         setCityLat,
         cityLon,
-        setCityLon
+        setCityLon,
+        cityMain, 
+        setCityMain,
        }
 
  

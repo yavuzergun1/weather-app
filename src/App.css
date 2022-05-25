@@ -25,7 +25,7 @@
   background-image: url(img/sunny-day.png);
 }
 .clear-night{
-  background-image: url(img/open-night.png);
+  background-image: url("https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   /* background-position:  0px -50px; */
   color: rgb(252, 234, 199);
 }
@@ -37,11 +37,11 @@
 .rain-night, .drizzle-night{
   background-image: url(img/rain-night.png);
 }
-.thunderstorm-night{
+.thunderstorm-night, .squall-night, .tornado-night{
   background-image: url(img/thunderstorm-night.png);
   color: rgb(250, 224, 174);
 }
-.thunderstorm-day{
+.thunderstorm-day, .squall-day, .tornado-day{
   background-image: url(img/thunderstorm-day.png);
   color: rgb(17, 13, 6);
 }
@@ -59,6 +59,18 @@
 }
 .clouds-night{
   background-image: url("https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg");
+}
+.mist-day, fog-day, .smoke-day, haze-day{
+  background-image: url("https://images.pexels.com/photos/1605325/pexels-photo-1605325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.mist-night{
+  background-image: url("https://images.pexels.com/photos/6468238/pexels-photo-6468238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.dust-day, .sand-day, .sand-night, .dust-night{
+  background-image: url("https://images.pexels.com/photos/5726359/pexels-photo-5726359.jpeg");
+}
+.ash-day, .ash-night{
+  background-image: url("https://images.pexels.com/photos/4070727/pexels-photo-4070727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .header{
@@ -109,10 +121,11 @@ padding-left: 40px;
   font-size: 1;
 }
 .note{
+  
   margin-bottom: 5px;
   font-size: 11px;
   text-shadow: none;
-  color: rgb(56, 50, 50);
+
 }
 
 @media (max-width: 960px) {

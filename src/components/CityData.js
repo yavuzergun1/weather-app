@@ -5,7 +5,11 @@ import { useState, useEffect } from 'react';
 
 
 function CityData() {
-    const {cityData, setCityData, city, setCity, cityLat, setCityLat, cityLon, setCityLon}= UseCityData();
+    const {cityData, setCityData}= UseCityData();
+    const { city, setCity}= UseCityData();
+    const { cityLat, setCityLat}= UseCityData();
+    const { cityLon, setCityLon}= UseCityData();
+    const {cityMain, setCityMain}= UseCityData();
 
     const getCityData= async (city)=> { 
         const key= process.env.REACT_APP_WEATHER_DATA;
@@ -13,20 +17,22 @@ function CityData() {
           try {
               const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&exclude="daily"&appid=${key}`)
           setCityData(data) 
+        //   setCityMain(data.weather[0].main)
           setCityLat(data.coord.lat)
           setCityLon(data.coord.lon)
+          setCityMain(data.weather[0].main);
         }
             catch (err){
-                alert('yanlış şehir')
+                alert('Please Enter a Valid City Name')
             }
             }  
 
             useEffect (()=>{
                city &&  getCityData(city)                
             },[city])
-        
+      console.log(cityMain);
   return (
-    <div>CityData</div>
+    <div></div>
   )
 }
 
