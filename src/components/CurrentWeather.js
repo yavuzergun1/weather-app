@@ -6,17 +6,15 @@ import { UseCityData } from '../context/CityDataContext';
 
 
 function CurrentWeather() {
-  const {city, setCity, cityData}= UseCityData();
+  const {city, setCity, cityData, cityLat, cityLon}= UseCityData();
   const [form, setForm]= useState();
-  const {weather, currentData, setCurrentData}= UseData();
-  
- 
+  const {weather, currentData, setCurrentData }= UseData();
   
   if (!weather.current){
     return <p></p>
   }
-  console.log(currentData);
-  
+  console.log(cityLat);
+  console.log(cityLon);
   return (
 <div>
 <form onSubmit={(e)=>{e.preventDefault(); setCity(form)}}>

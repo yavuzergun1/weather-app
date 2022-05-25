@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import {UseData} from '../context/DataContext';
+import CityData from './CityData';
 import CurrentWeather from './CurrentWeather';
 import DailyWeather from './DailyWeather';
 import Deneme from './Deneme';
@@ -15,6 +16,7 @@ function Container() {
     <div className={`main-container ${weatherCondition.toLowerCase()}-${isDay>-1 ? "day" : "night"}`}>
         <CurrentWeather/>
         <DailyWeather/>
+        <CityData/>
         {/* <Deneme/> */}
     </div>
   )
