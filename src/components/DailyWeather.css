@@ -36,12 +36,13 @@
 
   }
   .day-degree{
-    width: 100px;
+    width: 104px;
     text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
 
   }
   .day-day{
     width: 80px;
+    text-align: center;
   }
   .card-container{
     padding: 20px;
