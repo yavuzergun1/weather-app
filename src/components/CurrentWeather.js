@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {UseData} from '../context/DataContext'
 import moment from 'moment';
+import { MomentTimezone } from 'moment-timezone';
 import { UseCityData } from '../context/CityDataContext';
 
 
@@ -8,7 +9,7 @@ import { UseCityData } from '../context/CityDataContext';
 function CurrentWeather() {
   const {city, setCity, cityData, cityLat, cityLon}= UseCityData();
   const [form, setForm]= useState();
-  const {weather, currentData, setCurrentData }= UseData();
+  const {weather, currentData, setCurrentData, timeZone }= UseData();
   
   if (!weather.current){
     return <p></p>
@@ -39,7 +40,7 @@ function CurrentWeather() {
     <div className='second-container'>
       <div className="day">{moment().format(`D MMM YYYY`)}</div>
       <div className="day">{moment().format("dddd")}</div>
-      <div className="day">{moment().format('LTS')}</div>    
+      <div className="day">{moment().tz(`${timeZone}`).format('LTS')}</div>    
     </div>
 
   </div>

@@ -9,7 +9,8 @@ export const DataProvider= ({children})=>{
     const {latitude, longitude}= usePosition();
     const [weather, setweather]= useState([]);
     const [weatherCondition, setWeatherCondition]= useState();
-    const [isDay, setIsDay]= useState()
+    const [isDay, setIsDay]= useState();
+    const [timeZone, setTimeZone]= useState();
     const [currentData, setCurrentData]= useState([])
     const values = {
         weather,
@@ -20,9 +21,10 @@ export const DataProvider= ({children})=>{
         setIsDay,
         currentData,
         setCurrentData,
+        timeZone,
+        setTimeZone,
         }
     
-
     const getWeatherData=  (lat, lon)=> { 
         const key= process.env.REACT_APP_WEATHER_DATA;
     

@@ -9,14 +9,17 @@ import { UseCityData } from '../context/CityDataContext';
 
 function DailyWeather() {
    const [dailyData, setDailyData]= useState();
-    const{weather}= UseData();
+    const{weather, timeZone, setTimeZone}= UseData();
     const {cityLon, cityLat}= UseCityData();
     const getDailyData= async (city)=> { 
       const key= process.env.REACT_APP_WEATHER_DATA;
   
         try {
           const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat}&lon=${cityLon}&units=metric&exclude="daily"&appid=${key}`)
-        setDailyData(data)}
+        
+        setDailyData(data)
+        setTimeZone(data.timezone)
+      }
             catch (err) {
              
             }

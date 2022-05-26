@@ -30,7 +30,7 @@ function CityData() {
             useEffect (()=>{
                city &&  getCityData(city)                
             },[city])
-      console.log(cityMain);
+      console.log(cityData);
   return (
     <div></div>
   )
