@@ -20,7 +20,39 @@
   padding-top: 50px;
   /* background-position: 55% 25%; */
 }
-
+.input-city{
+  margin-left: 45px;
+}
+#input{
+    text-align: center;
+    padding: 3px;
+    font-size: 14px;
+    border-width: 1px;
+    border-color: #2e2828;
+    background-color: #FFFFFF;
+    color: #252222;
+    border-style: hidden;
+    border-radius: 25px;
+    box-shadow: 3px 5px 10px rgba(66,66,66,.43);
+}
+#input:hover{
+  box-shadow: 3px 5px 25px rgba(0, 0, 0, 0.856);
+}
+.header{
+  display: flex;
+  align-items:flex-start ;
+}
+.first-container{
+align-items: center;
+height: 55px;
+}
+.timezone{
+  font-size: 2rem;
+  font-weight: 650;
+}
+.data{
+  display: flex;
+}
 .clear-day {
   background-image: url(img/sunny-day.png);
 }
@@ -47,11 +79,11 @@
 }
 .snow-day {
   background-image: url(img/snow-day.jpg);
-  color: rgb(31, 46, 85);
+  color: rgb(234, 237, 243);
 }
 .snow-night {
   background-image: url(img/snow-night.jpg);
-  color: rgb(250, 224, 174);
+  color: rgb(255, 255, 255);
 }
 .clouds-day{
   background-image: url("https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -60,11 +92,12 @@
 .clouds-night{
   background-image: url("https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg");
 }
-.mist-day, fog-day, .smoke-day, haze-day{
+.mist-day, fog-day, .smoke-day, .haze-day{
   background-image: url("https://images.pexels.com/photos/1605325/pexels-photo-1605325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
-.mist-night{
+.mist-night, .fog-night, .smoke-night, .haze-night{
   background-image: url("https://images.pexels.com/photos/6468238/pexels-photo-6468238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  
 }
 .dust-day, .sand-day, .sand-night, .dust-night{
   background-image: url("https://images.pexels.com/photos/5726359/pexels-photo-5726359.jpeg");
@@ -74,7 +107,8 @@
 }
 
 .header{
-  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
+  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);
+  display: flex;
 
   display: flex;
   justify-content:space-between;
@@ -95,9 +129,7 @@ padding-left: 40px;
   justify-content:flex-start; 
   align-items:flex-start;
 }
-.data{
-  display: flex;
-  }
+
 
 .current-icon{
  width:  95px;
@@ -111,7 +143,6 @@ padding-left: 40px;
 
 .second-container{
   padding-right: 70px;
-  padding-top: 25px;
 }
 
 .currentData-container{
@@ -120,18 +151,18 @@ padding-left: 40px;
   display: block;
   font-size: 1;
 }
-.note{
-  
-  margin-bottom: 5px;
+#note{  
   font-size: 11px;
   text-shadow: none;
-
 }
 
 @media (max-width: 960px) {
   .main-container{
     height: auto;
     font-size: 1rem;
+  }
+  .input-city{
+    margin-left: 20px;
   }
   .first-container{
     padding-left: 20px;
@@ -145,6 +176,13 @@ padding-left: 40px;
   .clear-day{
     background-position: -980px;
   }
+  .mist-night, .fog-night, .smoke-night, .haze-night{
+    background-position: -450px;
+  }
+  #note{  
+    font-size: 12px;
+    text-shadow: none;
+  }
 }
 
 
@@ -153,15 +191,28 @@ padding-left: 40px;
   .main-container{
      padding-top: 15px;
   }
-  h1 {
-    font-size: 25px;
+  .input-city{
+    margin-left: 10px;
   }
+.first-container{
+  margin-top: 50px;
+}
+.timezone{
+  font-size: 25px;
+}
+.data{
+  display: flex;
+position: relative;
+left: -53px;
+}
 .second-container, .data, h3, .degree-container>div{
     font-size: 15px;
   }
   .current-icon{
-    width: 40px;
-   height: 40px;
+    width: 70px;
+   height: 70px;
+   margin-left: 7px;
+   margin-right: -7px;
   }
   .first-container{
     padding-left: 10px;
@@ -180,9 +231,31 @@ padding-left: 40px;
     font-size: 13px;
     margin-left: 15px;
   }
-  
   .clear-day{
     background-position: -1080px;
+  }
+  .clear-night{
+    background-position: -680px;
+  }
+  .thunderstorm-day{
+    background-position: -500px;
+  }
+  .thunderstorm-night{
+    background-position: -250px;
+  }
+  .snow-night {
+    background-image: url(img/snow-night.jpg);
+    background-position:-1200px;
+  }
+  .mist-night, .fog-night, .smoke-night, .haze-night{
+    background-position: -650px;
+  }
+  .ash-day, .ash-night{
+    background-position: -850px;
+  }
+  #note{  
+    font-size: 10px;
+    text-shadow: none;
   }
 
 }

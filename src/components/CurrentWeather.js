@@ -17,14 +17,14 @@ function CurrentWeather() {
  
   return (
 <div>
-<form onSubmit={(e)=>{e.preventDefault(); setCity(form)}}>
-  <input type="text" placeholder='Type a City Name' onChange={(e)=> setForm(e.target.value)} />
-<div>{cityData === undefined ? `${currentData.name}` : cityData.name} </div>
+
+  <form  className='input-city' onSubmit={(e)=>{e.preventDefault(); setCity(form)}}>
+  <input id='input' type="text" placeholder='Enter a City Name' onChange={(e)=> setForm(e.target.value)} />
 </form>
   <div className='header'>
   <div className='first-container' >
-    <h1 className='timezone'>{cityData === undefined ? `${currentData.sys.country} / ${currentData.name}`  : cityData.name}</h1> 
-        
+    <div className='timezone'>{cityData === undefined ? `${currentData.sys.country} / ${currentData.name}`  : cityData.name}</div> 
+   
         <div className="data">
         <img className='current-icon'  src={cityData === undefined ? `http://openweathermap.org/img/w/${weather.current.weather[0].icon}.png` : `http://openweathermap.org/img/w/${cityData.weather[0].icon}.png`} alt="" />
         <div className='degree-container'> 

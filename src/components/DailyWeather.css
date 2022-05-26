@@ -7,9 +7,14 @@
     align-items:center;
     justify-content:space-between;
     margin-top: 100px;
-    
-    
-  }
+    }
+  #daily-topic{
+      font-size: 25px;
+      height: 5px;
+    }
+    #daily-topic:hover{
+    background: none;
+    }
   .cards-container{
     width: 100%;
     height: auto;

@@ -33,10 +33,10 @@ function DailyWeather() {
 
   return (
     <div className='dailyWeather'>
-    <h1 className='days-topic'>7 Days Forecast</h1>
+        <h1 id='daily-topic'  className='card-container'>7 Days Forecast</h1>
       <div className='cards-container'>
       {(dailyData === undefined ? weather : dailyData ).daily.map((day, index)=>{
-       
+        
        return <div key={index} className={index===0 ? 'none' : 'card-container'}>              
              <div  className='day-day'>{moment().add(`${index}`, 'days').format('dddd') }</div>
              <div className='day-degree'> {Math.round(day.temp.max)}°C
@@ -49,7 +49,7 @@ function DailyWeather() {
      
         
       </div>
-      <div className='note card-container '>coded by Yavuz Ergun</div>
+      <div id='note' className='card-container '>coded by Yavuz Ergun</div>
      
          </div>
   )

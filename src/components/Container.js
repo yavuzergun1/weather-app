@@ -18,7 +18,7 @@ function Container() {
     // 
     // 
   return (
-    <div className={`${ (cityMain === undefined ? weatherCondition : cityMain ).toLowerCase()}-${isDay>-1 ? "day" : "night"}`}>
+    <div  className={`main-container ${ (cityMain === undefined ? weatherCondition : cityMain ).toLowerCase()}-${isDay>-1 ? "day" : "night"}`}>
         <CurrentWeather/>
         <DailyWeather/>
         <CityData/>
