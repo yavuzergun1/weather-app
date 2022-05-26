@@ -94,6 +94,7 @@ height: 55px;
 }
 .mist-day, fog-day, .smoke-day, .haze-day{
   background-image: url("https://images.pexels.com/photos/1605325/pexels-photo-1605325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  color: rgba(19, 13, 32, 0.37);
 }
 .mist-night, .fog-night, .smoke-night, .haze-night{
   background-image: url("https://images.pexels.com/photos/6468238/pexels-photo-6468238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
