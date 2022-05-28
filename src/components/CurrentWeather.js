@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import {UseData} from '../context/DataContext'
+import React, { useState } from 'react';
+// import {UseData} from '../context/DataContext'
 import moment from 'moment';
 import { MomentTimezone } from 'moment-timezone';
 import { UseCityData } from '../context/CityDataContext';
@@ -7,14 +7,14 @@ import { UseCityData } from '../context/CityDataContext';
 
 
 function CurrentWeather() {
-  const {city, setCity, cityData, cityLat, cityLon}= UseCityData();
+  const {city, setCity, cityData, cityLat, cityLon, currentData, weeklyData}= UseCityData();
   const [form, setForm]= useState();
-  const {weather, currentData, setCurrentData, timeZone }= UseData();
+  // const {weather, timeZone }= UseData();
   
-  if (!weather.current){
-    return <p></p>
+  if (!weeklyData){ 
+    return <p>loading current...</p>
   }
-  console.log(currentData);
+  // console.log(currentData);
  
   return (
 <div>
@@ -24,13 +24,13 @@ function CurrentWeather() {
 </form>
   <div className='header'>
   <div className='first-container' >
-    <div className='timezone'>{cityData === undefined ? `${currentData.sys.country} / ${currentData.name}`  : cityData.name}</div> 
+    <div className='timezone'>{ `${currentData.sys.country} / ${currentData.name}`  }</div> 
    
         <div className="data">
-        <img className='current-icon'  src={cityData === undefined ? `http://openweathermap.org/img/w/${weather.current.weather[0].icon}.png` : `http://openweathermap.org/img/w/${cityData.weather[0].icon}.png`} alt="" />
+        <img className='current-icon'  src={`http://openweathermap.org/img/w/${weeklyData.current.weather[0].icon}.png`} alt="" /> {/* weather yerine weeklyData konulacak */}
         <div className='degree-container'> 
-        <div>{cityData === undefined ? currentData.weather[0].description : cityData.weather[0].description }</div>
-        <h3 className='current-deg' >{cityData === undefined ? (currentData ? currentData.main.temp &&`${ Math.round(currentData.main.temp)}°C ` : "") : `${Math.round(cityData.main.temp)}°C`} </h3>
+        <div>{currentData.weather[0].description}</div>
+        <h3 className='current-deg' >{currentData.main.temp &&`${ Math.round(currentData.main.temp)}°C ` } </h3>
         </div>
        
       </div>
@@ -40,7 +40,7 @@ function CurrentWeather() {
     <div className='second-container'>
       <div className="day">{moment().format(`D MMM YYYY`)}</div>
       <div className="day">{moment().format("dddd")}</div>
-      <div className="day">{moment().tz(`${timeZone}`).format('LTS')}</div>    
+      <div className="day">{moment().tz(`${weeklyData.timezone}`).format('LTS')}</div>    
     </div>
 
   </div>

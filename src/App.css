@@ -53,57 +53,57 @@ height: 55px;
 .data{
   display: flex;
 }
-.clear-day {
+.Clear-day {
   background-image: url(img/sunny-day.png);
 }
-.clear-night{
+.Clear-night{
   background-image: url("https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   /* background-position:  0px -50px; */
   color: rgb(252, 234, 199);
 }
-.rain-day, .drizzle-day{
+.Rain-day, .Drizzle-day{
   background-image: url(img/rain-day.png);
   color: rgb(252, 202, 111);
 
 }
-.rain-night, .drizzle-night{
+.Rain-night, .Drizzle-night{
   background-image: url(img/rain-night.png);
 }
-.thunderstorm-night, .squall-night, .tornado-night{
+.Thunderstorm-night, .Squall-night, .Tornado-night{
   background-image: url(img/thunderstorm-night.png);
   color: rgb(250, 224, 174);
 }
-.thunderstorm-day, .squall-day, .tornado-day{
+.Thunderstorm-day, .Squall-day, .Tornado-day{
   background-image: url(img/thunderstorm-day.png);
   color: rgb(17, 13, 6);
 }
-.snow-day {
+.Snow-day {
   background-image: url(img/snow-day.jpg);
   color: rgb(234, 237, 243);
 }
-.snow-night {
+.Snow-night {
   background-image: url(img/snow-night.jpg);
   color: rgb(255, 255, 255);
 }
-.clouds-day{
+.Clouds-day{
   background-image: url("https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   color: rgb(53, 30, 136);
 }
-.clouds-night{
+.Clouds-night{
   background-image: url("https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg");
 }
-.mist-day, fog-day, .smoke-day, .haze-day{
+.Mist-day, .Fog-day, .Smoke-day, .Haze-day{
   background-image: url("https://images.pexels.com/photos/1605325/pexels-photo-1605325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   color: rgba(19, 13, 32, 0.37);
 }
-.mist-night, .fog-night, .smoke-night, .haze-night{
+.Mist-night, .Fog-night, .Smoke-night, .Haze-night{
   background-image: url("https://images.pexels.com/photos/6468238/pexels-photo-6468238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   
 }
-.dust-day, .sand-day, .sand-night, .dust-night{
+.Dust-day, .Sand-day, .Sand-night, .Dust-night{
   background-image: url("https://images.pexels.com/photos/5726359/pexels-photo-5726359.jpeg");
 }
-.ash-day, .ash-night{
+.Ash-day, .Ash-night{
   background-image: url("https://images.pexels.com/photos/4070727/pexels-photo-4070727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
