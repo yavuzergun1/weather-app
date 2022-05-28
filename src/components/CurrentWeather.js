@@ -12,7 +12,7 @@ function CurrentWeather() {
   // const {weather, timeZone }= UseData();
   
   if (!weeklyData){ 
-    return <p>loading current...</p>
+    return <p></p>
   }
   // console.log(currentData);
  

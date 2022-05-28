@@ -1,14 +1,20 @@
 import React from 'react';
 import Container from './components/Container';
 import './App.css'
-// import Deneme from './components/Deneme';
 import { CityDataProvider } from './context/CityDataContext';
-import AllData from './Data/AllData';
-// import {DataProvider} from './context/DataContext';
+import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Day1 from './routes/Day1';
 function App() {
   return (
     <CityDataProvider> 
-     <Container/>
+    <BrowserRouter> 
+    <Routes> 
+      <Route path="/weather-app" element={<Container/>} />
+      <Route path="/weather-app" element={<Day1/>} />
+
+    </Routes>
+    </BrowserRouter>
     </CityDataProvider>
   )
 }
