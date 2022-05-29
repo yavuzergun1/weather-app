@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
-// import {UseData} from '../context/DataContext';
-import { useEffect } from 'react';
 import moment from 'moment';
 import './DailyWeather.css';
 import '../App.css';
-import axios from 'axios';
 import { UseCityData } from '../context/CityDataContext';
 import { Link } from 'react-router-dom';
 
 function DailyWeather() {
-   const [dailyData, setDailyData]= useState();
     const {weeklyData}= UseCityData();
    
 
