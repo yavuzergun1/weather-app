@@ -6,10 +6,11 @@ import './DailyWeather.css';
 import '../App.css';
 import axios from 'axios';
 import { UseCityData } from '../context/CityDataContext';
+import { Link } from 'react-router-dom';
 
 function DailyWeather() {
    const [dailyData, setDailyData]= useState();
-    const {cityLon, cityLat, cityData, weeklyData, timeZone, setTimeZone}= UseCityData();
+    const {weeklyData}= UseCityData();
    
 
     if (!weeklyData){
@@ -21,14 +22,15 @@ function DailyWeather() {
       <div className='cards-container'>
       {(weeklyData).daily.map((day, index)=>{
         
-       return <div key={index} className={index===0 ? 'none' : 'card-container'}>              
+       return <Link key={index} to={`/day${index}`} style={{textDecoration: 'none'}}> 
+             <div  className={index===0 ? 'none' : 'card-container'}>              
              <div  className='day-day'>{moment().add(`${index}`, 'days').format('dddd') }</div>
              <div className='day-degree'> {Math.round(day.temp.max)}°C
              / {Math.round(day.temp.min)}°C</div> 
-             <div className='day-icon'><img className='daily-icons'  src={`http://openweathermap.org/img/w/${(dailyData === undefined ? weeklyData : dailyData ).daily[index].weather[0].icon}.png`} alt="" /></div>
+             <div className='day-icon'><img className='daily-icons'  src={`http://openweathermap.org/img/w/${(weeklyData).daily[index].weather[0].icon}.png`} alt="" /></div>
              <div className='description'>{weeklyData.daily[index].weather[0].description}</div>
              </div>
-                 
+             </Link>
    })}
      
         
