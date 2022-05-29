@@ -20,32 +20,32 @@ function AllData() {
 
   const getData= async ()=> { 
     const key= process.env.REACT_APP_WEATHER_DATA;
-
-    try {
-          const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&exclude="daily"&appid=692ef3b2913ddbcdb48a9aa442c751b5`)
-       setCityData(data);
-       setCityLat(data.coord.lat);
-       setCityLon(data.coord.lon);
-       setCityMain(data.weather[0].main);
-       console.log(cityData);
-          }
-              catch (err){
-                  // alert('city data problem')
-              }
+    if (city){
+      try {
+        const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&exclude="daily"&appid=692ef3b2913ddbcdb48a9aa442c751b5`)
+     setCityData(data);
+     setCityLat(data.coord.lat);
+     setCityLon(data.coord.lon);
+     setCityMain(data.weather[0].main);
+     console.log(cityData);
+        }
+            catch (err){
+                alert('Please Enter a Valid City Name')
+            }
+    }
+    
       
             
 
     try {
       const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${cityLat === undefined ? latitude : cityLat}&lon=${cityLon===undefined ? longitude : cityLon}&units=metric&appid=${key}`)
-      // {cityData === undefined ? `${currentData.sys.country} / ${currentData.name}
-      // dailyData === undefined ? weeklyData : dailyData
     setCurrentData(data);
     setCurrentDataWeather(data.weather[0].main);
     setIsDay((data.weather[0].icon).indexOf("d"));
     console.log(currentData);
-
 }
     catch (err){
+      
     }      
 
     try {
@@ -59,21 +59,7 @@ function AllData() {
 
       }
 
-      // const getCityData= async (city)=> { 
-      //   const key= process.env.REACT_APP_WEATHER_DATA;
-      //   try {
-      //     const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&exclude="daily"&appid=692ef3b2913ddbcdb48a9aa442c751b5`)
-      //  setCityData(data);
-      //  setCityLat(data.coord.lat);
-      //  setCityLon(data.coord.lon);
-      //  setCityMain(data.weather[0].main);
-      //  console.log(cityData);
-      //     }
-      //         catch (err){
-      //             // alert('city data problem')
-      //         }
-      
-      //       }
+   
 
       
         useEffect(() => {
@@ -82,9 +68,7 @@ function AllData() {
         }, [latitude, city, cityLat])
 
         
-        // useEffect(() => {
-        // getCityData(city);
-        // }, [city])
+     
         
         console.log(currentData);
         console.log(cityLat);

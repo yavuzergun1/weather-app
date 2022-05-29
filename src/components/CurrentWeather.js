@@ -7,9 +7,8 @@ import { UseCityData } from '../context/CityDataContext';
 
 
 function CurrentWeather() {
-  const {city, setCity, cityData, cityLat, cityLon, currentData, weeklyData}= UseCityData();
+  const {setCity,  currentData, weeklyData}= UseCityData();
   const [form, setForm]= useState();
-  // const {weather, timeZone }= UseData();
   
   if (!weeklyData){ 
     return <p></p>
