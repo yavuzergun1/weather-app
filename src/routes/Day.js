@@ -26,27 +26,39 @@ if(!dayData[id].temp){
 }
 
 return (
-
-    // 
     <div className={`route-container ${dayData[id].weather[0].main}-${(dayData[id].weather[0].icon).indexOf("d")>-1 ? "day" : "night"} ` }>
-    <div className= "Day1">    
-    <div className="time-container"> 
-    <div className='day-day'>{moment().add(`${id}`, 'days').format('dddd') }</div>
-             <div className='day-degree'> {Math.round(dayData[id].temp.max)}°C
-             / {Math.round(dayData[id].temp.min)}°C</div> 
-             <div className='day-icon'><img className='daily-icons'  src={`http://openweathermap.org/img/w/${dayData[id].weather[0].icon}.png`} alt="" /></div>
-             <div className='description'>{dayData[id].weather[0].description}</div>
-             </div>
-    <div className='daily-temp'>
-        <div className='daily-temp-topic'>Daily Temprature</div>
-        <div>Morning: {dayData[id].temp.morn} </div>
-        <div>Day: {dayData[id].temp.day} </div>
-        <div>Eve: {dayData[id].temp.eve} </div>
-        <div>Night: {dayData[id].temp.night} </div>
+    <div className= "Day1">  
+
+    <div className="route-header"> 
+    <div className="route-time">
+    <div className='route-day'>{moment().add(`${id}`, 'days').format('dddd') }</div>
+    <div className="route-date">{moment().add(`${id}`, 'days').format(`D MMM YYYY`)}</div>
     </div>
+        <div className='route-icon'><img className='daily-icons'  src={`http://openweathermap.org/img/w/${dayData[id].weather[0].icon}.png`} alt="" /></div>
+    <div className='route-weather'>
+        <div className='route-description'>{dayData[id].weather[0].description}</div>
+        <div className='route-degree'> {Math.round(dayData[id].temp.max)}°C
+             / {Math.round(dayData[id].temp.min)}°C </div> 
+    </div>
+    </div>
+    
+
+
+    <div className="route-degree-container"> 
+   
+    <div className='daily-temp'>
+        <div className='daily-temp-topic'>Daily Temprature</div><br />
+        <div className='daily-temp-data'><div>Morning:</div> <div> {Math.round(dayData[id].temp.morn)}°C </div></div>
+        <div className='daily-temp-data'><div>Day:</div> <div> {Math.round(dayData[id].temp.day)}°C </div></div>
+        <div className='daily-temp-data'><div>Evening:</div> <div> {Math.round(dayData[id].temp.eve)}°C </div></div>
+        <div className='daily-temp-data'><div>Night:</div> <div> {Math.round(dayData[id].temp.night)}°C </div></div>
+     
+        </div>
     <div className='wind-topic'>
-    <div>Wind Speed: {dayData[id].wind_speed} </div>
-    <div>Humidity: %{dayData[id].humidity} </div>
+        <div className='wind-data'> <div>Humidity:  </div> <div className='wind-hum'> %{dayData[id].humidity}</div></div>
+        <div className='wind-data'> <div>Wind Speed: </div> <div className='wind-des'> {dayData[id].wind_speed}m/sn </div></div>
+        <div> </div>
+    </div>
     </div>
 </div>          
              
