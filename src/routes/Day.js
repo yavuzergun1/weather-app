@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css';
 import { UseCityData } from "../context/CityDataContext";
 import timeZone from 'moment-timezone';
 import moment from 'moment';
@@ -25,7 +26,9 @@ if(!dayData[id].temp){
 }
 
 return (
-    <div>
+
+    // 
+    <div className={`route-container ${dayData[id].weather[0].main}-${(dayData[id].weather[0].icon).indexOf("d")>-1 ? "day" : "night"} ` }>
 id: {id}
 <div  className= "Day1">              
              <div  className='day-day'>{moment().add(`${id}`, 'days').format('dddd') }</div>
