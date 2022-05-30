@@ -11,13 +11,15 @@ function DailyWeather() {
     if (!weeklyData){
         return <p>Loading Weather Data...</p>
       }
+
+      console.log(weeklyData.daily[4]);
   return (
     <div className='dailyWeather'>
         <h1 id='daily-topic'  className='card-container'>7 Days Forecast</h1>
       <div className='cards-container'>
       {(weeklyData).daily.map((day, index)=>{
         
-       return <Link key={index} to={`/day${index}`} style={{textDecoration: 'none'}}> 
+       return <Link key={index} to={`/day/${index}`} style={{textDecoration: 'none'}}> 
              <div  className={index===0 ? 'none' : 'card-container'}>              
              <div  className='day-day'>{moment().add(`${index}`, 'days').format('dddd') }</div>
              <div className='day-degree'> {Math.round(day.temp.max)}°C
