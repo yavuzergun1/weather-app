@@ -244,6 +244,7 @@ padding-left: 40px;
 }
 .route-header{
   width: 35%;
+  min-width: 450px;
   display: flex;
   /* background-color: #fff; */
 }
@@ -272,28 +273,47 @@ padding-left: 40px;
   /* background-color: #fff; */
 }
 .route-degree-container{
-  width: 35%;
+  width: 40%;
+  min-width: 550px;
   display: flex;
   justify-content: space-between;
   /* background-color: #fff; */
 }
 
 .daily-temp{
-  width: 33%;
+  padding: 15px;
+  width: 43%;
 /* background-color: red; */
+}
+.daily-temp:hover{
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 15px;
 }
 .daily-temp-data{
   display: flex;
   justify-content:space-between;
 }
 .wind-topic{
-  width: 47%;
-  margin-top: 50px;
+  width: 250px;
+  margin-top: 55px;
+  margin-left: 40px;
+  padding: 10px;
   /* background-color: yellow; */
+}
+.wind-topic:hover{
+  background-color: rgba(255, 255, 255, 0.226);
+  border-radius: 15px;
 }
 .wind-data{
   display: flex;
   justify-content: space-between;
+}
+.arrow{
+ width: 20px;
+ color: #FFFFFF;
+ margin-left: 180px;
+ margin-top: 20px;
+ /* transform: rotate(60deg); */
 }
 .wind-hum{
 margin-right: 45px;}
