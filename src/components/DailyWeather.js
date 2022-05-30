@@ -19,7 +19,7 @@ function DailyWeather() {
       <div className='cards-container'>
       {(weeklyData).daily.map((day, index)=>{
         
-       return <Link key={index} to={`/day/${index}`} style={{textDecoration: 'none'}}> 
+       return <Link key={index} to={`/day/${index}`} style={{textDecoration: 'none', color:'unset'}}> 
              <div  className={index===0 ? 'none' : 'card-container'}>              
              <div  className='day-day'>{moment().add(`${index}`, 'days').format('dddd') }</div>
              <div className='day-degree'> {Math.round(day.temp.max)}°C

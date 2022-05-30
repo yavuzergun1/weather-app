@@ -189,10 +189,8 @@ padding-left: 40px;
   .currentData-container{
     margin-left: 20px;
   }
-  .clear-day{
-    background-position: -980px;
-  }
-  .mist-night, .fog-night, .smoke-night, .haze-night{
+
+  .Mist-night, .Fog-night, .Smoke-night, .Haze-night{
     background-position: -450px;
   }
   #note{  
@@ -247,26 +245,24 @@ left: -53px;
     font-size: 13px;
     margin-left: 15px;
   }
-  .clear-day{
-    background-position: -1080px;
-  }
-  .clear-night{
+
+  .Clear-night{
     background-position: -680px;
   }
-  .thunderstorm-day{
+  .Thunderstorm-day{
     background-position: -500px;
   }
-  .thunderstorm-night{
+  .Thunderstorm-night{
     background-position: -250px;
   }
-  .snow-night {
+  .Snow-night {
     background-image: url(img/snow-night.jpg);
     background-position:-1200px;
   }
-  .mist-night, .fog-night, .smoke-night, .haze-night{
+  .Mist-night, .Fog-night, .Smoke-night, .Haze-night{
     background-position: -650px;
   }
-  .ash-day, .ash-night{
+  .Ash-day, .Ash-night{
     background-position: -850px;
   }
   #note{  
