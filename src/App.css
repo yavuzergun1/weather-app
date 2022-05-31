@@ -429,10 +429,10 @@ margin-right: 45px;}
      padding-top: 15px;
   }
 .first-container{
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .timezone{
-  font-size: 25px;
+ font-size: 25px;
 }
 .data{
   display: flex;
@@ -498,7 +498,7 @@ left: -53px;
 
 
   /* WEEKLY WEATHER PART */
-  @media (max-width:630px){
+  
     .dailyWeather{
       margin-top: 20px;
     }
@@ -524,7 +524,7 @@ left: -53px;
    .route-degree-container{
      flex-direction: column;
    }
-  }
+  
 
   @media (max-width:500px){
   .route-header{
