@@ -42,6 +42,7 @@ function Data() {
     console.log(currentData);
 }
     catch (err){ 
+      console.log('currentData problem!');
     }      
 
     try {
@@ -51,12 +52,13 @@ function Data() {
 
     }
         catch (err){
+          console.log('weeklyData problem!');
         }  
 
       }
 
         useEffect(() => {
-        getData()
+      latitude &&  getData()
                
         }, [latitude, city, cityLat])
 

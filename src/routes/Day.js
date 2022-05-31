@@ -8,6 +8,7 @@ import { usePosition } from 'use-position';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { BsFillCursorFill } from 'react-icons/bs';
 
 function Day() {
     const {weeklyData, setWeeklyData, cityLat, cityLon}= UseCityData();
@@ -57,8 +58,9 @@ return (
     <div className='wind-topic'>
         <div className='wind-data'> <div>Humidity:  </div> <div className='wind-hum'> %{dayData[id].humidity}</div></div>
         <div className='wind-data'> <div>Wind Speed: </div> <div className='wind-des'> {dayData[id].wind_speed}m/sn </div></div>
-        <div className='arrow'> 
-        <svg style={{transform:`rotate(${dayData[id].wind_deg}deg)`}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"/></svg>
+        <div className='route-wind-container'> 
+        <div className='wind-data'>Wind Direction:</div>
+        <div className='route-wind-arrow' style={{transform:`rotate(${dayData[id].wind_deg-45}deg)`}} ><BsFillCursorFill/></div>
         </div>
     </div>
     </div>

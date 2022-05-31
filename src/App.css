@@ -151,7 +151,24 @@ padding-left: 40px;
   display: block;
   font-size: 1;
 }
-/* DAİLY WEATHER PART */
+
+.wind-container{
+  width: 300px;
+  margin-left: 40px;
+  display: flex;
+}
+.wind-arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50px;
+  border: 1.5px solid ;
+}
+
+/* WEEKLY WEATHER PART */
 
 .dailyWeather{
   text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
@@ -317,6 +334,21 @@ padding-left: 40px;
 }
 .wind-hum{
 margin-right: 45px;}
+
+.route-wind-container{
+  display: flex;
+  
+}
+.route-wind-arrow{
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1.5px solid ;
+}
 
 #note{  
   font-size: 11px;

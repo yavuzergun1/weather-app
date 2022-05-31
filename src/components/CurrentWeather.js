@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import { UseCityData } from '../context/CityDataContext';
-
+import { BsFillCursorFill } from 'react-icons/bs';
 
 
 function CurrentWeather() {
@@ -11,7 +11,6 @@ function CurrentWeather() {
   if (!weeklyData){ 
     return <p></p>
   }
- 
   return (
 <div>
 
@@ -39,11 +38,15 @@ function CurrentWeather() {
       <div className="day">{moment().tz(`${weeklyData.timezone}`).format('LTS')}</div>    
     </div>
 
+
+</div>
+<div className='wind-container'>
+<div className="currentData">Wind Speed: {currentData.wind.speed}m/s </div>
+<div className='wind-arrow' style={{transform:`rotate(${currentData.wind.deg-45}deg)`}} ><BsFillCursorFill/></div>
   </div>
       <div className="currentData-container">
         <div className="currentData">Feels Like: {`${ Math.round(currentData.main.feels_like)}`}°C </div>
         <div className="currentData">Humidity: %{currentData.main.humidity} </div>
-        <div className="currentData">Wind Speed: {currentData.wind.speed}m/s </div>
         <div className="currentData">Max Temprature: {`${ Math.round(currentData.main.temp_max)}`}°C</div>
         <div className="currentData">Min Temprature: {`${ Math.round(currentData.main.temp_min)}`}°C</div>
             
