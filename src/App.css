@@ -16,13 +16,11 @@
   color: rgb(211, 217, 250);
   font-size: 1.2rem;
   font-weight: 500;
-  /* padding-left: 40px; */
+  padding-left: 40px;
   padding-top: 50px;
   /* background-position: 55% 25%; */
 }
-.input-city{
-  margin-left: 45px;
-}
+
 #input{
     text-align: center;
     padding: 3px;
@@ -129,10 +127,20 @@ padding-left: 40px;
   justify-content:flex-start; 
   align-items:flex-start;
 }
-
-
 .current-icon{
  width:  95px;
+}
+.rotate{
+  animation: rotation 25s infinite linear;
+  height: 95px;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .degree-container > div{
@@ -147,14 +155,12 @@ padding-left: 40px;
 
 .currentData-container{
   text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
-  margin-left: 40px;
   display: block;
   font-size: 1;
 }
 
 .wind-container{
   width: 300px;
-  margin-left: 40px;
   display: flex;
 }
 .wind-arrow{
@@ -216,6 +222,9 @@ padding-left: 40px;
 .day-day{
   width: 80px;
   text-align: center;
+}
+.daily-rotate{
+  animation: rotation 25s infinite linear;
 }
 .card-container{
   padding: 20px;
@@ -290,6 +299,12 @@ padding-left: 40px;
   margin-top: -15px;
   /* background-color: red; */
 }
+
+ .route-rotate{
+   animation: rotation 25s infinite linear;
+   height: 130px;
+ }
+
 .route-day{
   width: 190px;
   font-size: 40px;
@@ -319,7 +334,6 @@ padding-left: 40px;
 .wind-topic{
   width: 250px;
   margin-top: 55px;
-  margin-left: 40px;
   padding: 10px;
   /* background-color: yellow; */
 }
@@ -331,19 +345,12 @@ padding-left: 40px;
   display: flex;
   justify-content: space-between;
 }
-.arrow{
- width: 20px;
- color: #FFFFFF;
- margin-left: 180px;
- margin-top: 20px;
- /* transform: rotate(60deg); */
-}
+
 .wind-hum{
 margin-right: 45px;}
 
 .route-wind-container{
   display: flex;
-  
 }
 .route-wind-arrow{
   margin-left: 35px;
@@ -366,23 +373,12 @@ margin-right: 45px;}
     height: auto;
     font-size: 1rem;
   }
-  .input-city{
-    margin-left: 20px;
-  }
   .first-container{
     padding-left: 20px;
   }
   .second-container{
     padding-right: 20px;
   }
-  .currentData-container{
-    margin-left: 20px;
-  }
-  .wind-topic{
-    margin-left: 20px;
-    padding-left: 0px;
-  }
-
   .Mist-night, .Fog-night, .Smoke-night, .Haze-night{
     background-position: -450px;
   }
@@ -390,9 +386,7 @@ margin-right: 45px;}
     font-size: 12px;
     text-shadow: none;
   }
-  .wind-container{
-    margin-left: 20px;
-  }
+
   .wind-arrow{
     align-items: center;
     justify-content: center;
@@ -434,9 +428,6 @@ margin-right: 45px;}
   .main-container{
      padding-top: 15px;
   }
-  .input-city{
-    margin-left: 10px;
-  }
 .first-container{
   margin-top: 50px;
 }
@@ -472,7 +463,6 @@ left: -53px;
   }
   .currentData-container{
     font-size: 13px;
-    margin-left: 15px;
   }
   .Clear-day{
     background-position: -290px;
@@ -503,7 +493,6 @@ left: -53px;
     text-shadow: none;
   }
   .wind-container{
-    margin-left: 15px;
     font-size: 14px;
   }
 
@@ -555,7 +544,9 @@ left: -53px;
   }
   .route-top-degree{
     margin-top: 30px;
-    margin-left: 10px;
+  }
+  .route-rotate{
+    height: 100px;
   }
   }
 

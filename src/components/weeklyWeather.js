@@ -23,7 +23,7 @@ function WeeklyWeather() {
              <div  className='day-day'>{moment().add(`${index}`, 'days').format('dddd') }</div>
              <div className='day-degree'> {Math.round(day.temp.max)}°C
              / {Math.round(day.temp.min)}°C</div> 
-             <div className='day-icon'><img className='daily-icons'  src={`http://openweathermap.org/img/w/${(weeklyData).daily[index].weather[0].icon}.png`} alt="" /></div>
+             <div className='day-icon'><img className={`${weeklyData.daily[index].weather[0].main === 'Clear' ? 'daily-rotate' : 'daily-icons'}`}  src={`http://openweathermap.org/img/w/${(weeklyData).daily[index].weather[0].icon}.png`} alt="" /></div>
              <div className='description'>{weeklyData.daily[index].weather[0].description}</div>
              </div>
              </Link>
