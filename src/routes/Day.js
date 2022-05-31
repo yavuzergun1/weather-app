@@ -25,9 +25,9 @@ console.log(dayData[id]);
 if(!dayData[id].temp){
     return <p>Loading...</p>
 }
-// ${dayData[id].weather[0].main}-${(dayData[id].weather[0].icon).indexOf("d")>-1 ? "day" : "night"}
+// 
 return (
-    <div className={`route-container  route-Clear-day` }>
+    <div className={`route-container  route-${dayData[id].weather[0].main}-${(dayData[id].weather[0].icon).indexOf("d")>-1 ? "day" : "night"}` }>
     <div className= "Day1">  
 
     <div className="route-header"> 
@@ -36,7 +36,7 @@ return (
     <div className="route-date">{moment().add(`${id}`, 'days').format(`D MMM YYYY`)}</div>
     </div>
     <div className='route-top-degree'>
-    <div className='route-icon'><img className={`${dayData[id].weather[0].main === 'Clear' ? 'route-rotate' : 'current-icon'}`}  src={`http://openweathermap.org/img/w/${dayData[id].weather[0].icon}.png`} alt="" /></div>
+    <img className={`${dayData[id].weather[0].main === 'Clear' ? 'route-rotate' : 'current-icon'}`}  src={`http://openweathermap.org/img/w/${dayData[id].weather[0].icon}.png`} alt="" />
     <div className='route-weather'>
         <div className='route-description'>{dayData[id].weather[0].description}</div>
         <div className='route-degree'> {Math.round(dayData[id].temp.max)}°C

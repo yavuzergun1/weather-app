@@ -283,6 +283,7 @@ padding-left: 40px;
 .route-top-degree{
   width: 230px;
   display: flex;
+  align-items:flex-start;
   /* background-color: #fff; */
 }
 .route-weather{
@@ -296,13 +297,13 @@ padding-left: 40px;
 }
 .route-icon img{
   width: 130px;
-  margin-top: -15px;
+  margin-top: -35px;
   /* background-color: red; */
 }
-
  .route-rotate{
    animation: rotation 25s infinite linear;
    height: 130px;
+   margin-top: -35px;
  }
 
 .route-day{
