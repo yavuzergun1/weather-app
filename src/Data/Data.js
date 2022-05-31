@@ -22,7 +22,7 @@ function Data() {
     const key= process.env.REACT_APP_WEATHER_DATA;
     if (city){
       try {
-        const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&exclude="daily"&appid=692ef3b2913ddbcdb48a9aa442c751b5`)
+        const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&exclude="daily"&appid=${key}`)
      setCityData(data);
      setCityLat(data.coord.lat);
      setCityLon(data.coord.lon);
@@ -45,7 +45,7 @@ function Data() {
     }      
 
     try {
-          const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat === undefined ? latitude : cityLat}&lon=${cityLon===undefined ? longitude : cityLon}&units=metric&appid=8d46bcbb16c429ea15a4912244f3cd0b`)
+          const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat === undefined ? latitude : cityLat}&lon=${cityLon===undefined ? longitude : cityLon}&units=metric&appid=${key}`)
       setWeeklyData(data);  
       console.log(weeklyData);  
 
@@ -60,12 +60,7 @@ function Data() {
                
         }, [latitude, city, cityLat])
 
-        
-     
-        
-        console.log(currentData);
-        console.log(cityLat);
-
+      
   return (
     <div>
     </div>

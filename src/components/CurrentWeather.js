@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-// import {UseData} from '../context/DataContext'
 import moment from 'moment';
-import { MomentTimezone } from 'moment-timezone';
 import { UseCityData } from '../context/CityDataContext';
 
 
@@ -13,7 +11,6 @@ function CurrentWeather() {
   if (!weeklyData){ 
     return <p></p>
   }
-  // console.log(currentData);
  
   return (
 <div>

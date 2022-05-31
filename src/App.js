@@ -5,7 +5,7 @@ import { CityDataProvider } from './context/CityDataContext';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import Day from './routes/Day';
-import DailyWeather from './components/DailyWeather';
+import DailyWeather from './components/weeklyWeather';
 function App() {
   return (
     <CityDataProvider> 

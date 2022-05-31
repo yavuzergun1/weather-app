@@ -1,10 +1,9 @@
 import moment from 'moment';
-import './DailyWeather.css';
 import '../App.css';
 import { UseCityData } from '../context/CityDataContext';
 import { Link } from 'react-router-dom';
 
-function DailyWeather() {
+function WeeklyWeather() {
     const {weeklyData}= UseCityData();
    
 
@@ -38,4 +37,4 @@ function DailyWeather() {
   )
 }
 
-export default DailyWeather
+export default WeeklyWeather
