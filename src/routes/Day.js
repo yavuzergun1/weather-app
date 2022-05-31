@@ -36,7 +36,7 @@ return (
     <div className="route-date">{moment().add(`${id}`, 'days').format(`D MMM YYYY`)}</div>
     </div>
     <div className='route-top-degree'>
-    <img className={`${dayData[id].weather[0].main === 'Clear' ? 'route-rotate' : 'current-icon'}`}  src={`http://openweathermap.org/img/w/${dayData[id].weather[0].icon}.png`} alt="" />
+    <img className={`${dayData[id].weather[0].main === 'Clear' ? 'route-rotate' : 'xrotate'}`}  src={`http://openweathermap.org/img/w/${dayData[id].weather[0].icon}.png`} alt="" />
     <div className='route-weather'>
         <div className='route-description'>{dayData[id].weather[0].description}</div>
         <div className='route-degree'> {Math.round(dayData[id].temp.max)}°C

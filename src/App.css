@@ -142,6 +142,19 @@ padding-left: 40px;
     transform: rotate(359deg);
   }
 }
+.xrotate{
+  animation: xrotate 1.5s infinite alternate linear;
+  height: 80px;
+  margin-left: 25px;
+}
+@keyframes xrotate {
+  from{
+transform: translate(5px);
+  }
+  to{
+transform: translate(-5px);
+  }
+}
 
 .degree-container > div{
  font-size: 20px;

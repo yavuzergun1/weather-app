@@ -22,7 +22,7 @@ function CurrentWeather() {
     <div className='timezone'>{ `${currentData.sys.country} / ${currentData.name}`  }</div> 
    
         <div className="data">
-        <img className={`${currentData.weather[0].main === 'Clear' ? 'rotate' : 'current-icon'}`}   src={`http://openweathermap.org/img/w/${weeklyData.current.weather[0].icon}.png`} alt="" /> {/* weather yerine weeklyData konulacak */}
+        <img className={`${currentData.weather[0].main === 'Clear' ? 'rotate' : 'xrotate'}`}   src={`http://openweathermap.org/img/w/${weeklyData.current.weather[0].icon}.png`} alt="" /> {/* weather yerine weeklyData konulacak */}
         <div className='degree-container'> 
         <div>{currentData.weather[0].description}</div>
         <h3 className='current-deg' >{currentData.main.temp &&`${ Math.round(currentData.main.temp)}°C ` } </h3>
