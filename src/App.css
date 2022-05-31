@@ -525,12 +525,11 @@ left: -53px;
    .route-degree-container{
      flex-direction: column;
    }
-  
 
-  @media (max-width:500px){
+@media (max-width:500px){
   .route-header{
-    flex-direction: column;
-    align-items:flex-start;
+  flex-direction: column;
+  align-items:flex-start;
 }
 .route-time{
   position: relative;
@@ -545,6 +544,9 @@ left: -53px;
   }
   .route-top-degree{
     margin-top: 30px;
+  }
+  .rotate{
+    margin-left: 15px;
   }
   .route-rotate{
     height: 100px;
