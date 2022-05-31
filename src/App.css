@@ -122,6 +122,7 @@ padding-left: 40px;
 }
 
 .degree-container{
+  margin-left: 5px;
   display: flex;
   flex-direction: column;
   justify-content:flex-start; 
@@ -131,7 +132,7 @@ padding-left: 40px;
  width:  95px;
 }
 .rotate{
-  animation: rotation 25s infinite linear;
+  animation: rotation 45s infinite linear;
   height: 95px;
 }
 @keyframes rotation {
@@ -149,10 +150,10 @@ padding-left: 40px;
 }
 @keyframes xrotate {
   from{
-transform: translate(5px);
+transform: translate(-5px);
   }
   to{
-transform: translate(-5px);
+transform: translate(-10px);
   }
 }
 
@@ -192,7 +193,7 @@ transform: translate(-5px);
 /* WEEKLY WEATHER PART */
 
 .dailyWeather{
-  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
+  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);
   width: 100%;
   height: auto;
   display: flex;
@@ -204,6 +205,7 @@ transform: translate(-5px);
 #daily-topic{
     font-size: 25px;
     height: 5px;
+    margin-bottom: 55px;
   }
   #daily-topic:hover{
   background: none;
@@ -213,40 +215,44 @@ transform: translate(-5px);
   height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 30px;
-  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
+  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);
 
 }
 .description{
-  width: 80px;
-  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
+  width: 100px;
+  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);
 
 }
 .days-topic{
  color: rgb(106, 35, 112);
- text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
-
+ text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);
 }
 .day-degree{
-  width: 104px;
-  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);display: flex;
+  width: 113px;
+  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);
 
 }
 .day-day{
-  width: 80px;
+  width: 100px;
   text-align: center;
 }
 .daily-rotate{
-  animation: rotation 25s infinite linear;
+  animation: rotation 45s infinite linear;
+}
+.daily-xrotate{
+  animation: xrotate 2.5s infinite alternate linear;
+
 }
 .card-container{
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-decoration: none;
+  text-align: center;
+  transform: translate(-45px);
 }
 .card-container:hover{
   background-color: rgba(255, 255, 255, 0.185);
@@ -270,7 +276,7 @@ transform: translate(-5px);
   color: rgb(211, 217, 250);
   font-size: 1.2rem;
   font-weight: 500;
-  text-shadow: 1px -1px 2px rgba(82, 89, 148, 0.84);
+  text-shadow: 1px -1px 3px rgba(82, 89, 148, 0.84);
   /* padding-left: 40px; */
   padding-top: 50px;
   /* background-position: 55% 25%; */
@@ -335,6 +341,7 @@ transform: translate(-5px);
 }
 
 .daily-temp{
+  margin-top: 50px;
   padding: 15px;
   width: 43%;
 /* background-color: red; */
@@ -422,7 +429,7 @@ margin-right: 45px;}
        flex-direction: column;    
    }
    .card-container{
-     
+      transform: translate(0);
        display: flex;
        flex-direction: row;
        justify-content:space-around;
@@ -562,6 +569,10 @@ left: -53px;
   }
   .rotate{
     margin-left: 15px;
+  }
+  .daily-xrotate{
+    height: 50px;
+    width: 50px;
   }
   .route-rotate{
     height: 100px;
