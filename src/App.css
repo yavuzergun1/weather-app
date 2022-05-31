@@ -53,7 +53,7 @@ height: 55px;
 .data{
   display: flex;
 }
-.Clear-day {
+.Clear-day, .route-Clear-day{
   background-image: url(img/sunny-day.png);
 }
 .Clear-night{
@@ -61,7 +61,7 @@ height: 55px;
   /* background-position:  0px -50px; */
   color: rgb(252, 234, 199);
 }
-.Rain-day, .Drizzle-day{
+.Rain-day, .route-Rain-day, .route-Drizzle-day, .Drizzle-day{
   background-image: url(img/rain-day.png);
   color: rgb(252, 202, 111);
 
@@ -73,11 +73,11 @@ height: 55px;
   background-image: url(img/thunderstorm-night.png);
   color: rgb(250, 224, 174);
 }
-.Thunderstorm-day, .Squall-day, .Tornado-day{
+.Thunderstorm-day, .route-Thunderstorm-day, .Squall-day, .route-Squall-day, .route-Tornado-day, .Tornado-day{
   background-image: url(img/thunderstorm-day.png);
   color: rgb(17, 13, 6);
 }
-.Snow-day {
+.Snow-day, .route-Snow-day {
   background-image: url(img/snow-day.jpg);
   color: rgb(234, 237, 243);
 }
@@ -85,14 +85,14 @@ height: 55px;
   background-image: url(img/snow-night.jpg);
   color: rgb(255, 255, 255);
 }
-.Clouds-day{
+.Clouds-day, .route-Clouds-day{
   background-image: url("https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   color: rgb(53, 30, 136);
 }
 .Clouds-night{
   background-image: url("https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg");
 }
-.Mist-day, .Fog-day, .Smoke-day, .Haze-day{
+.Mist-day, .route-Mist-day, .Fog-day, .route-Fog-day, .Smoke-day, .route-Smoke-day, .route-Haze-day, .Haze-day{
   background-image: url("https://images.pexels.com/photos/1605325/pexels-photo-1605325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   color: rgba(19, 13, 32, 0.37);
 }
@@ -271,6 +271,11 @@ padding-left: 40px;
   flex-direction: column;
   /* background-color: #fff; */
 }
+.route-top-degree{
+  width: 230px;
+  display: flex;
+  /* background-color: #fff; */
+}
 .route-weather{
   width: 200px;
   display: flex;
@@ -373,6 +378,10 @@ margin-right: 45px;}
   .currentData-container{
     margin-left: 20px;
   }
+  .wind-topic{
+    margin-left: 20px;
+    padding-left: 0px;
+  }
 
   .Mist-night, .Fog-night, .Smoke-night, .Haze-night{
     background-position: -450px;
@@ -465,18 +474,22 @@ left: -53px;
     font-size: 13px;
     margin-left: 15px;
   }
-
+  .Clear-day{
+    background-position: -290px;
+  }
   .Clear-night{
     background-position: -680px;
   }
   .Thunderstorm-day{
     background-position: -500px;
   }
+  .route-Thunderstorm-day{
+    background-position: -290px;
+  }
   .Thunderstorm-night{
     background-position: -250px;
   }
   .Snow-night {
-    background-image: url(img/snow-night.jpg);
     background-position:-1200px;
   }
   .Mist-night, .Fog-night, .Smoke-night, .Haze-night{
@@ -519,9 +532,32 @@ left: -53px;
   .day-day{
     width: 100px;
     }
-   
+   .route-degree-container{
+     flex-direction: column;
+   }
   }
 
+  @media (max-width:500px){
+  .route-header{
+    flex-direction: column;
+    align-items:flex-start;
+}
+.route-time{
+  position: relative;
+  left:50px
+}
+  .route-icon{
+  width: 10px;
+}
+  .route-icon img{
+    width: 100px;
+    margin-left: -25px;
+  }
+  .route-top-degree{
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  }
 
 }
 
