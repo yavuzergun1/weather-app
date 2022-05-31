@@ -9,9 +9,9 @@ import DailyWeather from './components/weeklyWeather';
 function App() {
   return (
     <CityDataProvider> 
-    <BrowserRouter> 
+    <BrowserRouter basename='/weather-app'> 
     <Routes> 
-      <Route path="/weather-app" element={<Container/>} />
+      <Route path="/" element={<Container/>} />
       <Route path="/Days" element={<DailyWeather/>} />
       <Route path=":id" element={<Day/>} />
     </Routes>
