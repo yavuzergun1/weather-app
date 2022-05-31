@@ -161,11 +161,12 @@ padding-left: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
-  border-radius: 50px;
-  border: 1.5px solid ;
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  /* padding-top: 10px ; */
+  /* border-radius: 50px;
+  border: 1.5px solid ; */
 }
 
 /* WEEKLY WEATHER PART */
@@ -380,6 +381,15 @@ margin-right: 45px;}
     font-size: 12px;
     text-shadow: none;
   }
+  .wind-container{
+    margin-left: 20px;
+  }
+  .wind-arrow{
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: 5px;
+  }
 
   /* WEEKLY WEATHER PART */
 
@@ -479,6 +489,11 @@ left: -53px;
     font-size: 10px;
     text-shadow: none;
   }
+  .wind-container{
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
 
   /* WEEKLY WEATHER PART */
   @media (max-width:630px){
@@ -504,7 +519,9 @@ left: -53px;
   .day-day{
     width: 100px;
     }
+   
   }
+
 
 }
 
