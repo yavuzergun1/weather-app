@@ -13,7 +13,7 @@ function App() {
     <Routes> 
       <Route path="/weather-app" element={<Container/>} />
       <Route path="/Days" element={<DailyWeather/>} />
-      <Route path="/day/:id" element={<Day/>} />
+      <Route path=":id" element={<Day/>} />
     
     </Routes>
     </BrowserRouter>

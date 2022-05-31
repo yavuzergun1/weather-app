@@ -1,6 +1,6 @@
 {
   "homepage": "https://yavuzergun1.github.io/weather-app",
-  "name": "wheather-app",
+   "name": "wheather-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
