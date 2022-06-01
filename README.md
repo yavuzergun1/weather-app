@@ -23,3 +23,5 @@
 -7 günlük hava durumunun ayrı sayfada detay görüntüsü
 
 -Responsive tasarım
+
+www.patika.dev 
