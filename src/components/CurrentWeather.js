@@ -13,7 +13,6 @@ function CurrentWeather() {
   }
   return (
 <div>
-<i class="wi wi-night-sleet"></i>
   <form  className='input-city' onSubmit={(e)=>{e.preventDefault(); setCity(form)}}>
   <input id='input' type="text" placeholder='Enter a City Name' onChange={(e)=> setForm(e.target.value)} />
 </form>
@@ -42,7 +41,9 @@ function CurrentWeather() {
 </div>
 <div className='wind-container'>
 <div className="currentData">Wind Speed: {currentData.wind.speed}m/s </div>
-<div className='wind-arrow' style={{transform:`rotate(${currentData.wind.deg-45}deg)`}} ><BsFillCursorFill/></div>
+{/* <div className='wind-arrow' style={{transform:`rotate(${currentData.wind.deg-45}deg)`}} ><BsFillCursorFill/></div> */}
+<i className= {`wi wind-arrow wi-wind towards-${currentData.wind.deg}-deg`} ></i>
+
   </div>
       <div className="currentData-container">
         <div className="currentData">Feels Like: {`${ Math.round(currentData.main.feels_like)}`}°C </div>
