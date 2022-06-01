@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
-import '../App.css';
 import { UseCityData } from "../context/CityDataContext";
-import timeZone from 'moment-timezone';
 import moment from 'moment';
 import { useEffect } from 'react';
 import { usePosition } from 'use-position';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { BsFillCursorFill } from 'react-icons/bs';
 
 function Day() {
     const {weeklyData}= UseCityData();
-    const {latitude, longitude}= usePosition();
     const [dayData, setDayData]= useState();
     const {id}= useParams();
 

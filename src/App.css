@@ -53,6 +53,7 @@ height: 55px;
 }
 .Clear-day, .route-Clear-day{
   background-image: url(img/sunny-day.png);
+  color: rgb(166, 209, 247);
 }
 .Clear-night{
   background-image: url("https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -77,7 +78,7 @@ height: 55px;
 }
 .Snow-day, .route-Snow-day {
   background-image: url(img/snow-day.jpg);
-  color: rgb(234, 237, 243);
+  color: rgb(46, 69, 116);
 }
 .Snow-night {
   background-image: url(img/snow-night.jpg);
@@ -273,7 +274,6 @@ transform: translate(-10px);
   overflow:scroll;
   background-repeat: no-repeat;
   background-size:cover;
-  color: rgb(211, 217, 250);
   font-size: 1.2rem;
   font-weight: 500;
   text-shadow: 1px -1px 3px rgba(82, 89, 148, 0.84);
@@ -322,7 +322,7 @@ transform: translate(-10px);
   /* background-color: red; */
 }
  .route-rotate{
-   animation: rotation 25s infinite linear;
+   animation: rotation 40s infinite linear;
    height: 130px;
    margin-top: -25px;
  }
@@ -518,6 +518,7 @@ left: -53px;
   .wind-container{
     font-size: 14px;
   }
+  
 
 
   /* WEEKLY WEATHER PART */

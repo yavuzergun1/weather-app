@@ -13,7 +13,7 @@ function CurrentWeather() {
   }
   return (
 <div>
-
+<i class="wi wi-night-sleet"></i>
   <form  className='input-city' onSubmit={(e)=>{e.preventDefault(); setCity(form)}}>
   <input id='input' type="text" placeholder='Enter a City Name' onChange={(e)=> setForm(e.target.value)} />
 </form>

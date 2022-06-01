@@ -14,6 +14,14 @@ function App() {
       <Route path="/" element={<Container/>} />
       <Route path="/Days" element={<DailyWeather/>} />
       <Route path=":id" element={<Day/>} />
+      <Route path="*" 
+      element={
+        <main style={{ padding: "10rem" }}>
+          <p>There's nothing here!</p>
+        </main>
+      }
+      />
+
     </Routes>
     </BrowserRouter>
     </CityDataProvider>
