@@ -145,16 +145,16 @@ padding-left: 40px;
   }
 }
 .xrotate{
-  animation: xrotate 1.5s infinite alternate linear;
+  animation: xrotate 10s infinite alternate linear;
   height: 80px;
   margin-left: 25px;
 }
 @keyframes xrotate {
   from{
-transform: translate(-5px);
+transform: translate(5px);
   }
   to{
-transform: translate(-10px);
+transform: translate(-25px);
   }
 }
 
@@ -236,7 +236,7 @@ transform: translate(-10px);
   animation: rotation 45s infinite linear;
 }
 .daily-xrotate{
-  animation: xrotate 2.5s infinite alternate linear;
+  animation: xrotate 9s infinite alternate linear;
 
 }
 .card-container{
@@ -293,6 +293,7 @@ transform: translate(-10px);
 .route-time{
   display: flex;
   flex-direction: column;
+  /* transform: translate(0, 15px); */
   /* background-color: #fff; */
 }
 .route-top-degree{
@@ -328,7 +329,6 @@ margin-left: 5px;
   flex-direction: column;
   justify-content:flex-start;
   align-items:center;
-  margin-top: 13px;
   /* background-color: #fff; */
 }
 .route-icon img{
