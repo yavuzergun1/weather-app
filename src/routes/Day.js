@@ -13,16 +13,17 @@ import { BsFillCursorFill } from 'react-icons/bs';
 function Day() {
     const {weeklyData}= UseCityData();
     const {latitude, longitude}= usePosition();
-    const [dayData, setDayData]= useState(weeklyData);
+    const [dayData, setDayData]= useState();
     const {id}= useParams();
 
-useEffect(() => {
- weeklyData && localStorage.setItem("data", JSON.stringify(weeklyData.daily))
-}, [weeklyData])
-
-console.log(dayData[id]);
+    useEffect(() => {
+        weeklyData && localStorage.setItem("data", JSON.stringify(weeklyData.daily))
+        setDayData(JSON.parse(localStorage.getItem("data")))
+        console.log(weeklyData);
+    }, [weeklyData])
+    
  
-if(!dayData[id].temp){
+if(!dayData){
     return <p>Loading...</p>
 }
 // 
