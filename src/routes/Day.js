@@ -11,9 +11,9 @@ import { useParams } from 'react-router-dom';
 import { BsFillCursorFill } from 'react-icons/bs';
 
 function Day() {
-    const {weeklyData, setWeeklyData, cityLat, cityLon}= UseCityData();
+    const {weeklyData}= UseCityData();
     const {latitude, longitude}= usePosition();
-    const [dayData, setDayData]= useState(JSON.parse(localStorage.getItem("data")));
+    const [dayData, setDayData]= useState(weeklyData);
     const {id}= useParams();
 
 useEffect(() => {
