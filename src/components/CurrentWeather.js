@@ -41,7 +41,6 @@ function CurrentWeather() {
 </div>
 <div className='wind-container'>
 <div className="currentData">Wind Speed: {currentData.wind.speed}m/s </div>
-{/* <div className='wind-arrow' style={{transform:`rotate(${currentData.wind.deg-45}deg)`}} ><BsFillCursorFill/></div> */}
 <i className= {`wi wind-arrow wi-wind towards-${currentData.wind.deg}-deg`} ></i>
 
   </div>

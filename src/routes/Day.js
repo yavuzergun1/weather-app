@@ -12,7 +12,6 @@ import { BsFillCursorFill } from 'react-icons/bs';
 
 function Day() {
     const {weeklyData}= UseCityData();
-    const {latitude, longitude}= usePosition();
     const [dayData, setDayData]= useState();
     const {id}= useParams();
 
@@ -42,7 +41,13 @@ return (
         <div className='route-description'>{dayData[id].weather[0].description}</div>
         <div className='route-degree'> {Math.round(dayData[id].temp.max)}°C
              / {Math.round(dayData[id].temp.min)}°C </div> 
+    </div>       
     </div>
+
+    <div className='wind-topic'>
+        <div className='wind-data'>Humidity: %{dayData[id].humidity}</div>
+        <div className='wind-data'> Wind Speed: {dayData[id].wind_speed}m/sn <i className= {`wi route-wind-arrow route-wind-arrow wi-wind towards-${dayData[id].wind_deg}-deg`} ></i></div>
+        
        
     </div>
     </div>
@@ -59,14 +64,7 @@ return (
         <div className='daily-temp-data'><div>Night:</div> <div> {Math.round(dayData[id].temp.night)}°C </div></div>
      
         </div>
-    <div className='wind-topic'>
-        <div className='wind-data'> <div>Humidity:  </div> <div className='wind-hum'> %{dayData[id].humidity}</div></div>
-        <div className='wind-data'> <div>Wind Speed: </div> <div className='wind-des'> {dayData[id].wind_speed}m/sn </div></div>
-        <div className='route-wind-container'> 
-        <div className='wind-data'>Wind Direction:</div>
-        <div className='route-wind-arrow' style={{transform:`rotate(${dayData[id].wind_deg-45}deg)`}} ><BsFillCursorFill/></div>
-        </div>
-    </div>
+  
     </div>
 </div>          
              
