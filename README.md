@@ -1,3 +1,5 @@
+-Asenkron programlama ile çoklu api verisi alınmış ve react router ile detaylı veriler farklı sayfalarda gösterilmiştir.
+
 -Bulunduğunuz konumun anlık hava durumu bilgileri
 
 -Bulunduğunuz konumun anlık saat bilgileri
@@ -18,4 +20,6 @@
 
 -rüzgar yönünü gösteren ok
 
--React-Router ile 7 günlük hava durumunun ayrı sayfada detay görüntüsü
+-7 günlük hava durumunun ayrı sayfada detay görüntüsü
+
+-Responsive tasarım
