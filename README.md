@@ -1,4 +1,5 @@
--Bulunduğunuz konumun anlık hava durumu bilgileri.
+-Bulunduğunuz konumun anlık hava durumu bilgileri
+
 -Bulunduğunuz konumun anlık saat bilgileri
 -Bulunduğunuz konumun haftalık detaylı hava durumu bilgileri
 -İsmi yazılan şehrin anlık hava durumu bilgileri
