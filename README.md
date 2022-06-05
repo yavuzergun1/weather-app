@@ -16,6 +16,8 @@
 
 -Mevcut hava durumu bilgisine göre (bulutlu, yağmurlu, açık hava) değişen arka plan resmi
 
+-Bilgileri görüntülenen şehrin gündüz ve gece durumuna göre değişen araka plan resmi 
+
 -Hava durumuna göre değişen animasyonlu iconlar
 
 -rüzgar yönünü gösteren ok
@@ -23,5 +25,6 @@
 -7 günlük hava durumunun ayrı sayfada detay görüntüsü
 
 -Responsive tasarım
+
 
 www.patika.dev 
