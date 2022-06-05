@@ -1,3 +1,5 @@
+Demo Link: https://yavuzergun1.github.io/weather-app/
+
 -Asenkron programlama ile çoklu api verisi alınmış ve react router ile detaylı veriler farklı sayfalarda gösterilmiştir.
 
 -Bulunduğunuz konumun anlık hava durumu bilgileri
@@ -26,5 +28,9 @@
 
 -Responsive tasarım
 
+<<<<<<< HEAD
 
 www.patika.dev 
+=======
+www.patika.dev 
+>>>>>>> 9e4726336dff6774d6f43d88d124591585880fb4
